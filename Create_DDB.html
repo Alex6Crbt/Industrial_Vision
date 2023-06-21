@@ -1,0 +1,404 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="prev" title="IA_training module" href="IA_training.html" />
+
+    <!-- Generated with Sphinx 7.0.1 and Furo 2023.05.20 -->
+        <title>Create_DDB module - Industrial_Vision 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=e6660623a769aa55fea372102b9bf3151b292993" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-brand-primary: #7C4DFF;
+  --color-brand-content: #7C4DFF;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-primary: #F7DC6F;
+  --color-brand-content: #F7DC6F;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-primary: #F7DC6F;
+  --color-brand-content: #F7DC6F;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">Industrial_Vision 1.0 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">Industrial_Vision 1.0 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about_the_project.html">About the project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Usage.html">Usage</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="modules.html">Modules</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Modules</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Industrial_Vision.html">Industrial_Vision module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IA_training.html">IA_training module</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Create_DDB module</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="create-ddb-module">
+<h1>Create_DDB module<a class="headerlink" href="#create-ddb-module" title="Permalink to this heading">#</a></h1>
+<p>The database generated by the <cite>CreeBD</cite> class is designed to train a neural network. Preprocessing
+plays a crucial role in simplifying the problem and improving the effectiveness of the neural network training process.</p>
+<p>Preprocessing refers to the transformation and manipulation of the raw input data before feeding it
+into the neural network. It involves applying various operations to make the data more suitable for the
+learning algorithm. In the case of image data, preprocessing techniques significantly impact the network’s performance and convergence.</p>
+<p>The <cite>CreeBD</cite> class performs several preprocessing steps on the input images before generating the database:</p>
+<ol class="arabic">
+<li><p>Conversion to Grayscale:</p>
+<blockquote>
+<div><p>The images are converted to grayscale using the <cite>convert(‘L’)</cite> method.
+Grayscale conversion simplifies the image representation by reducing it to a single channel, eliminating
+the color information. This is also advantageous as it reduces the input dimensionality and removes
+potential noise or variations caused by color channels.</p>
+</div></blockquote>
+</li>
+<li><p>Thresholding:</p>
+<blockquote>
+<div><p>The <cite>seuil</cite> method applies a threshold to the grayscale image. Thresholding involves
+converting the image into a binary format by assigning a fixed value to pixels based on a predefined
+threshold. This help  in simplifying the image by distinguishing between foreground and background
+regions or separating important features from the background.</p>
+</div></blockquote>
+</li>
+<li><p>Resizing:</p>
+<blockquote>
+<div><p>The <cite>resize</cite> method resizes the image to a fixed width and height. Resizing is beneficial
+for neural networks as it ensures uniform input dimensions, which is often required for efficient processing.
+Additionally, resizing help in reducing computational complexity and memory requirements.</p>
+</div></blockquote>
+</li>
+<li><p>Translation and Rotation:</p>
+<blockquote>
+<div><p>The <cite>translation</cite> and <cite>rotation</cite> methods perform geometric transformations
+on the image data. These transformations enhance the network’s ability to generalize by introducing
+variations and augmenting the training dataset. By applying random translations and rotations, the network
+becomes more robust to changes in position and orientation of the objects in the images.</p>
+</div></blockquote>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>By applying these preprocessing techniques, the <cite>CreeBD</cite> class simplifies the image data and prepares
+it for the neural network training process.</p>
+<p>The simplified representations help the network focus on relevant patterns and features,
+reduce the impact of noise or irrelevant information, and improve the
+network’s ability to learn and generalize from the data.</p>
+<p>Ultimately, preprocessing contributes to enhancing
+the neural network’s performance, accuracy, and efficiency in solving the given problem.</p>
+</div>
+<span class="target" id="module-Create_DDB"></span><dl class="py class">
+<dt class="sig sig-object py" id="Create_DDB.CreeBD">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Create_DDB.</span></span><span class="sig-name descname"><span class="pre">CreeBD</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Test</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbrimageset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Create_DDB.html#CreeBD"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Create_DDB.CreeBD" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for creating the image database.</p>
+<p>Parameters:
+- Test (bool): Indicates whether to run the create test database mode or not. Default is True.
+- nbrimageset (int): Number of image sets to generate. Default is 500.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Create_DDB.CreeBD.randgen">
+<span class="sig-name descname"><span class="pre">randgen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ni</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Create_DDB.html#CreeBD.randgen"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Create_DDB.CreeBD.randgen" title="Permalink to this definition">#</a></dt>
+<dd><p>Generates random images.</p>
+<p>Args:
+- im: Input image.
+- ni (int): Number of images to generate.
+- tq (bool): Indicates whether to display progress bar. Default is True.</p>
+<p>Returns:
+- X (list): List of generated images.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Create_DDB.CreeBD.resize">
+<span class="sig-name descname"><span class="pre">resize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Create_DDB.html#CreeBD.resize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Create_DDB.CreeBD.resize" title="Permalink to this definition">#</a></dt>
+<dd><p>Resizes the image.</p>
+<p>Args:
+- image: Input image.
+- l (int): Width of the resized image.
+- m (int): Height of the resized image.</p>
+<p>Returns:
+- Resized image.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Create_DDB.CreeBD.rotation">
+<span class="sig-name descname"><span class="pre">rotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Create_DDB.html#CreeBD.rotation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Create_DDB.CreeBD.rotation" title="Permalink to this definition">#</a></dt>
+<dd><p>Rotates the image.</p>
+<p>Args:
+- image: Input image.
+- deg (float): Rotation angle in degrees.</p>
+<p>Returns:
+- Rotated image.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Create_DDB.CreeBD.seuil">
+<span class="sig-name descname"><span class="pre">seuil</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">imNB</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Create_DDB.html#CreeBD.seuil"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Create_DDB.CreeBD.seuil" title="Permalink to this definition">#</a></dt>
+<dd><p>Applies a threshold to the image.</p>
+<p>Args:
+- imNB: Input grayscale image.
+- s (int): Threshold value.</p>
+<p>Returns:
+- Thresholded image.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Create_DDB.CreeBD.translation">
+<span class="sig-name descname"><span class="pre">translation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Create_DDB.html#CreeBD.translation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Create_DDB.CreeBD.translation" title="Permalink to this definition">#</a></dt>
+<dd><p>Translates the image.</p>
+<p>Args:
+- image: Input image.
+- x (float): Translation along the x-axis.
+- y (float): Translation along the y-axis.</p>
+<p>Returns:
+- Translated image.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          <a class="prev-page" href="IA_training.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">IA_training module</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, Alex6Crbt
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Create_DDB module</a><ul>
+<li><a class="reference internal" href="#Create_DDB.CreeBD"><code class="docutils literal notranslate"><span class="pre">CreeBD</span></code></a><ul>
+<li><a class="reference internal" href="#Create_DDB.CreeBD.randgen"><code class="docutils literal notranslate"><span class="pre">CreeBD.randgen()</span></code></a></li>
+<li><a class="reference internal" href="#Create_DDB.CreeBD.resize"><code class="docutils literal notranslate"><span class="pre">CreeBD.resize()</span></code></a></li>
+<li><a class="reference internal" href="#Create_DDB.CreeBD.rotation"><code class="docutils literal notranslate"><span class="pre">CreeBD.rotation()</span></code></a></li>
+<li><a class="reference internal" href="#Create_DDB.CreeBD.seuil"><code class="docutils literal notranslate"><span class="pre">CreeBD.seuil()</span></code></a></li>
+<li><a class="reference internal" href="#Create_DDB.CreeBD.translation"><code class="docutils literal notranslate"><span class="pre">CreeBD.translation()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/scripts/furo.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    </body>
+</html>

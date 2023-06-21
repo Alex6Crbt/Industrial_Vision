@@ -1,0 +1,1098 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="IA_training module" href="IA_training.html" /><link rel="prev" title="Modules" href="modules.html" />
+
+    <!-- Generated with Sphinx 7.0.1 and Furo 2023.05.20 -->
+        <title>Industrial_Vision module - Industrial_Vision 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=e6660623a769aa55fea372102b9bf3151b292993" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-brand-primary: #7C4DFF;
+  --color-brand-content: #7C4DFF;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-primary: #F7DC6F;
+  --color-brand-content: #F7DC6F;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-primary: #F7DC6F;
+  --color-brand-content: #F7DC6F;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">Industrial_Vision 1.0 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">Industrial_Vision 1.0 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about_the_project.html">About the project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Usage.html">Usage</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="modules.html">Modules</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Modules</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Industrial_Vision module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IA_training.html">IA_training module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Create_DDB.html">Create_DDB module</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="module-Industrial_Vision">
+<span id="industrial-vision-module"></span><h1>Industrial_Vision module<a class="headerlink" href="#module-Industrial_Vision" title="Permalink to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="Industrial_Vision.Couleurim">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Industrial_Vision.</span></span><span class="sig-name descname"><span class="pre">Couleurim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Foldername</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'images/o1.bmp'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">livemode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Frame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Couleurim"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Couleurim" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Couleurim class represents an image color analysis tool.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Foldername</strong> (<em>str</em>) – The path to the image file. Default is ‘images/o1.bmp’.</p></li>
+<li><p><strong>livemode</strong> (<em>bool</em>) – If True, uses a live frame instead of reading an image file. Default is False.</p></li>
+<li><p><strong>Frame</strong> (<em>PIL.Image.Image</em>) – The live frame to analyze. Only used if livemode is True.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Industrial_Vision.Couleurim.r">
+<span class="sig-name descname"><span class="pre">r</span></span><a class="headerlink" href="#Industrial_Vision.Couleurim.r" title="Permalink to this definition">#</a></dt>
+<dd><p>Red channel values of the image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Industrial_Vision.Couleurim.g">
+<span class="sig-name descname"><span class="pre">g</span></span><a class="headerlink" href="#Industrial_Vision.Couleurim.g" title="Permalink to this definition">#</a></dt>
+<dd><p>Green channel values of the image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Industrial_Vision.Couleurim.b">
+<span class="sig-name descname"><span class="pre">b</span></span><a class="headerlink" href="#Industrial_Vision.Couleurim.b" title="Permalink to this definition">#</a></dt>
+<dd><p>Blue channel values of the image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Industrial_Vision.Couleurim.argr">
+<span class="sig-name descname"><span class="pre">argr</span></span><a class="headerlink" href="#Industrial_Vision.Couleurim.argr" title="Permalink to this definition">#</a></dt>
+<dd><p>Indices of the maximum value in the red channel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Industrial_Vision.Couleurim.argg">
+<span class="sig-name descname"><span class="pre">argg</span></span><a class="headerlink" href="#Industrial_Vision.Couleurim.argg" title="Permalink to this definition">#</a></dt>
+<dd><p>Indices of the maximum value in the green channel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Industrial_Vision.Couleurim.argb">
+<span class="sig-name descname"><span class="pre">argb</span></span><a class="headerlink" href="#Industrial_Vision.Couleurim.argb" title="Permalink to this definition">#</a></dt>
+<dd><p>Indices of the maximum value in the blue channel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Industrial_Vision.Couleurim.nc">
+<span class="sig-name descname"><span class="pre">nc</span></span><a class="headerlink" href="#Industrial_Vision.Couleurim.nc" title="Permalink to this definition">#</a></dt>
+<dd><p>Maximum color values for each channel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.Couleurim.affichage">
+<span class="sig-name descname"><span class="pre">affichage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Couleurim.affichage"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Couleurim.affichage" title="Permalink to this definition">#</a></dt>
+<dd><p>Displays the image with highlighted color channels.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The red channel is shown in the top-left subplot.
+The green channel is shown in the bottom-left subplot.
+The blue channel is shown in the top-right subplot.
+The closest color name to the analyzed color is shown in the bottom-right subplot.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.Couleurim.couleur_proche">
+<span class="sig-name descname"><span class="pre">couleur_proche</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">requested_colour</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Couleurim.couleur_proche"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Couleurim.couleur_proche" title="Permalink to this definition">#</a></dt>
+<dd><p>Finds the closest color name to the analyzed color.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>requested_colour</strong> (<em>list</em>) – RGB values of the color to find the closest name for. Default is None,
+which uses the analyzed color stored in nc attribute.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The name of the closest color.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Industrial_Vision.IAFormes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Industrial_Vision.</span></span><span class="sig-name descname"><span class="pre">IAFormes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Test</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#IAFormes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.IAFormes" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>IAFormes class implements a shape recognition system using a multi-layer perceptron (MLP) classifier.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Test</strong> (<em>bool</em>) – If True, initializes the classifier with a test dataset. Default is False.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Industrial_Vision.IAFormes.__test">
+<span class="sig-name descname"><span class="pre">__test</span></span><a class="headerlink" href="#Industrial_Vision.IAFormes.__test" title="Permalink to this definition">#</a></dt>
+<dd><p>Flag indicating whether the test mode is enabled.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Industrial_Vision.IAFormes.__mlp2">
+<span class="sig-name descname"><span class="pre">__mlp2</span></span><a class="headerlink" href="#Industrial_Vision.IAFormes.__mlp2" title="Permalink to this definition">#</a></dt>
+<dd><p>Multi-layer perceptron classifier object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>MLPClassifier</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Industrial_Vision.IAFormes.x_test">
+<span class="sig-name descname"><span class="pre">x_test</span></span><a class="headerlink" href="#Industrial_Vision.IAFormes.x_test" title="Permalink to this definition">#</a></dt>
+<dd><p>Test input data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Industrial_Vision.IAFormes.y_test">
+<span class="sig-name descname"><span class="pre">y_test</span></span><a class="headerlink" href="#Industrial_Vision.IAFormes.y_test" title="Permalink to this definition">#</a></dt>
+<dd><p>Test target labels.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Industrial_Vision.IAFormes.xt">
+<span class="sig-name descname"><span class="pre">xt</span></span><a class="headerlink" href="#Industrial_Vision.IAFormes.xt" title="Permalink to this definition">#</a></dt>
+<dd><p>Training input data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Industrial_Vision.IAFormes.yt">
+<span class="sig-name descname"><span class="pre">yt</span></span><a class="headerlink" href="#Industrial_Vision.IAFormes.yt" title="Permalink to this definition">#</a></dt>
+<dd><p>Training target labels.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.IAFormes.Proba">
+<span class="sig-name descname"><span class="pre">Proba</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xtest</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#IAFormes.Proba"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.IAFormes.Proba" title="Permalink to this definition">#</a></dt>
+<dd><p>Predicts the probabilities of each class label for the given input data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>xtest</strong> (<em>ndarray</em>) – Input data to predict probabilities for.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Array of predicted probabilities for each class label.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.IAFormes.Proba2">
+<span class="sig-name descname"><span class="pre">Proba2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xtest</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#IAFormes.Proba2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.IAFormes.Proba2" title="Permalink to this definition">#</a></dt>
+<dd><p>Predicts the class labels for the given input data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>xtest</strong> (<em>ndarray</em>) – Input data to predict labels for.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Array of predicted labels.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.IAFormes.matconf">
+<span class="sig-name descname"><span class="pre">matconf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#IAFormes.matconf"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.IAFormes.matconf" title="Permalink to this definition">#</a></dt>
+<dd><p>Displays the confusion matrix based on the predicted labels and true labels of the test dataset.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method should only be called when the test mode is enabled.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.IAFormes.montreimage">
+<span class="sig-name descname"><span class="pre">montreimage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#IAFormes.montreimage"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.IAFormes.montreimage" title="Permalink to this definition">#</a></dt>
+<dd><p>Displays the image at index k from the given set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>k</strong> (<em>int</em>) – Index of the image to display.</p></li>
+<li><p><strong>set</strong> (<em>ndarray</em>) – Set of images.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Industrial_Vision.IAcouleurs">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Industrial_Vision.</span></span><span class="sig-name descname"><span class="pre">IAcouleurs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">livemode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#IAcouleurs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.IAcouleurs" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>IAcouleurs class represents an image color and shape classification tool.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>livemode</strong> (<em>bool</em>) – If True, enables live mode for analyzing frames. Default is True.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Industrial_Vision.IAcouleurs.IA">
+<span class="sig-name descname"><span class="pre">IA</span></span><a class="headerlink" href="#Industrial_Vision.IAcouleurs.IA" title="Permalink to this definition">#</a></dt>
+<dd><p>Instance of the IAFormes class for shape classification.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#Industrial_Vision.IAFormes" title="Industrial_Vision.IAFormes">IAFormes</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Industrial_Vision.IAcouleurs.__livemode">
+<span class="sig-name descname"><span class="pre">__livemode</span></span><a class="headerlink" href="#Industrial_Vision.IAcouleurs.__livemode" title="Permalink to this definition">#</a></dt>
+<dd><p>Flag indicating whether the live mode is enabled or not.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.IAcouleurs.afficheinfo">
+<span class="sig-name descname"><span class="pre">afficheinfo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#IAcouleurs.afficheinfo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.IAcouleurs.afficheinfo" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns the classification results and the closest color name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A tuple containing the classification results dictionary and the closest color name.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.IAcouleurs.aquisi">
+<span class="sig-name descname"><span class="pre">aquisi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#IAcouleurs.aquisi"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.IAcouleurs.aquisi" title="Permalink to this definition">#</a></dt>
+<dd><p>Preprocesses an image for shape classification.</p>
+<p>This method applies thresholding and resizing to the input image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>im</strong> (<em>ndarray</em>) – The grayscale image to preprocess.</p></li>
+<li><p><strong>s</strong> (<em>int</em>) – Threshold value for image binarization.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Preprocessed image data as a 1D array.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.IAcouleurs.classi2">
+<span class="sig-name descname"><span class="pre">classi2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Fichier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'images/e1.bmp'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Frame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#IAcouleurs.classi2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.IAcouleurs.classi2" title="Permalink to this definition">#</a></dt>
+<dd><p>Performs shape classification on an image or frame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> (<em>int</em>) – Threshold value for image binarization. Default is 50.</p></li>
+<li><p><strong>Fichier</strong> (<em>str</em>) – Path to the image file. Default is ‘images/e1.bmp’.</p></li>
+<li><p><strong>Frame</strong> (<em>ndarray</em>) – The live frame to classify. Only used if livemode is True.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The index of the predicted shape class.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.IAcouleurs.classification">
+<span class="sig-name descname"><span class="pre">classification</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Fichier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'images/e1.bmp'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Frame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#IAcouleurs.classification"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.IAcouleurs.classification" title="Permalink to this definition">#</a></dt>
+<dd><p>Performs color and shape classification on an image or frame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> (<em>int</em>) – Threshold value for image binarization. Default is 50.</p></li>
+<li><p><strong>Fichier</strong> (<em>str</em>) – Path to the image file. Default is ‘images/e1.bmp’.</p></li>
+<li><p><strong>Frame</strong> (<em>ndarray</em>) – The live frame to classify. Only used if livemode is True.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A list containing the classification results. The list contains the following elements:</dt><dd><ul class="simple">
+<li><p>The shape classification result as a tuple (shape_name, probability).</p></li>
+<li><p>The closest color name to the analyzed color.</p></li>
+<li><p>The RGB values of the analyzed color.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.IAcouleurs.resize">
+<span class="sig-name descname"><span class="pre">resize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#IAcouleurs.resize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.IAcouleurs.resize" title="Permalink to this definition">#</a></dt>
+<dd><p>Resizes an image to the specified dimensions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>ndarray</em>) – The image to resize.</p></li>
+<li><p><strong>l</strong> (<em>int</em>) – The width of the resized image.</p></li>
+<li><p><strong>m</strong> (<em>int</em>) – The height of the resized image.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The resized image.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.IAcouleurs.seuil">
+<span class="sig-name descname"><span class="pre">seuil</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">imNB</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">120</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#IAcouleurs.seuil"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.IAcouleurs.seuil" title="Permalink to this definition">#</a></dt>
+<dd><p>Applies a threshold to an image.</p>
+<p>Pixels with intensity values below the threshold are set to 0, and pixels with intensity values
+above or equal to the threshold are kept as is.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>imNB</strong> (<em>ndarray</em>) – The grayscale image to apply the threshold to.</p></li>
+<li><p><strong>s</strong> (<em>int</em>) – Threshold value. Default is 120.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The thresholded image.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Industrial_Vision.Window">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Industrial_Vision.</span></span><span class="sig-name descname"><span class="pre">Window</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Window"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Window" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QWidget</span></code></p>
+<p>Window class represents the main interface for displaying a video feed and processing images.</p>
+<dl class="simple">
+<dt>Signals:</dt><dd><p>ImageUpdate (QImage): Signal emitted when a new frame is available to update the displayed image.
+PrediUpdate (list): Signal emitted when a new prediction result is available.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Industrial_Vision.Window.Worker1">
+<span class="sig-name descname"><span class="pre">Worker1</span></span><a class="headerlink" href="#Industrial_Vision.Window.Worker1" title="Permalink to this definition">#</a></dt>
+<dd><p>Worker1 instance for capturing frames from the camera and applying filters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#Industrial_Vision.Worker1" title="Industrial_Vision.Worker1">Worker1</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Industrial_Vision.Window.Worker2">
+<span class="sig-name descname"><span class="pre">Worker2</span></span><a class="headerlink" href="#Industrial_Vision.Window.Worker2" title="Permalink to this definition">#</a></dt>
+<dd><p>Worker2 instance for image processing and prediction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#Industrial_Vision.Worker2" title="Industrial_Vision.Worker2">Worker2</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Industrial_Vision.Window.Methods">
+<span class="sig-name descname"><span class="pre">Methods</span></span><a class="headerlink" href="#Industrial_Vision.Window.Methods" title="Permalink to this definition">#</a></dt>
+<dd><p>__init__(self, parent=None): Initializes the Window object and sets up the user interface.
+CancelFeed(self): Cancels the video feed and stops the workers.
+changet(self): Slot for handling changes in the time interval.
+changeim(self, c): Slot for handling changes in the image processing mode.
+changettr1(self): Slot for handling changes in the threshold value.
+ImageUpdateSlot(self, Image): Slot for updating the displayed image.
+PrediUpdateSlot(self, pred): Slot for updating the prediction result.
+traitim(self, val): Slot for handling changes in the image processing mode.
+fin(self): Slot for stopping the workers.
+marcheCl(self): Slot for starting the workers and configuring the processing parameters.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.Window.CancelFeed">
+<span class="sig-name descname"><span class="pre">CancelFeed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Window.CancelFeed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Window.CancelFeed" title="Permalink to this definition">#</a></dt>
+<dd><p>Cancels the video feed and stops the workers.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Industrial_Vision.Window.ImageUpdate">
+<span class="sig-name descname"><span class="pre">ImageUpdate</span></span><a class="headerlink" href="#Industrial_Vision.Window.ImageUpdate" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.Window.ImageUpdateSlot">
+<span class="sig-name descname"><span class="pre">ImageUpdateSlot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Image</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Window.ImageUpdateSlot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Window.ImageUpdateSlot" title="Permalink to this definition">#</a></dt>
+<dd><p>Slot for updating the displayed image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Image</strong> (<em>QImage</em>) – The new image to be displayed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Industrial_Vision.Window.PrediUpdate">
+<span class="sig-name descname"><span class="pre">PrediUpdate</span></span><a class="headerlink" href="#Industrial_Vision.Window.PrediUpdate" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.Window.PrediUpdateSlot">
+<span class="sig-name descname"><span class="pre">PrediUpdateSlot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pred</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Window.PrediUpdateSlot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Window.PrediUpdateSlot" title="Permalink to this definition">#</a></dt>
+<dd><p>Slot for updating the prediction result.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pred</strong> (<em>list</em>) – The prediction result.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.Window.changeim">
+<span class="sig-name descname"><span class="pre">changeim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Window.changeim"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Window.changeim" title="Permalink to this definition">#</a></dt>
+<dd><p>Slot for handling changes in the image processing mode.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>c</strong> – The new value of the image processing mode.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.Window.changet">
+<span class="sig-name descname"><span class="pre">changet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Window.changet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Window.changet" title="Permalink to this definition">#</a></dt>
+<dd><p>Slot for handling changes in the time interval.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.Window.changettr1">
+<span class="sig-name descname"><span class="pre">changettr1</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Window.changettr1"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Window.changettr1" title="Permalink to this definition">#</a></dt>
+<dd><p>Slot for handling changes in the threshold value.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.Window.fin">
+<span class="sig-name descname"><span class="pre">fin</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Window.fin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Window.fin" title="Permalink to this definition">#</a></dt>
+<dd><p>Slot for stopping the workers.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.Window.marcheCl">
+<span class="sig-name descname"><span class="pre">marcheCl</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Window.marcheCl"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Window.marcheCl" title="Permalink to this definition">#</a></dt>
+<dd><p>Slot for starting the workers and configuring the processing parameters.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.Window.traitim">
+<span class="sig-name descname"><span class="pre">traitim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Window.traitim"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Window.traitim" title="Permalink to this definition">#</a></dt>
+<dd><p>Slot for handling changes in the image processing mode.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>val</strong> – The new value of the image processing mode.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Industrial_Vision.Worker1">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Industrial_Vision.</span></span><span class="sig-name descname"><span class="pre">Worker1</span></span><a class="reference internal" href="_modules/Industrial_Vision.html#Worker1"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Worker1" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QThread</span></code></p>
+<p>A worker thread class for image processing.</p>
+<dl class="simple">
+<dt>Signals:</dt><dd><ul class="simple">
+<li><p>ImageUpdate: A PyQt signal emitted when a processed image is ready to be displayed.</p></li>
+<li><p>frameUpdate: A PyQt signal emitted when a frame is ready to be processed.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">-</span> <span class="pre">timact</span></span></dt>
+<dd><p>The time interval between processed frames in seconds.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">-</span> <span class="pre">ThreadActive</span></span></dt>
+<dd><p>Indicates whether the worker thread is active or not.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">-</span> <span class="pre">traitement</span></span></dt>
+<dd><p>The type of image processing to be performed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">-</span> <span class="pre">th1</span></span></dt>
+<dd><p>The first threshold value for image processing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">-</span> <span class="pre">th2</span></span></dt>
+<dd><p>The second threshold value for image processing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Industrial_Vision.Worker1.ImageUpdate">
+<span class="sig-name descname"><span class="pre">ImageUpdate</span></span><a class="headerlink" href="#Industrial_Vision.Worker1.ImageUpdate" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Industrial_Vision.Worker1.frameUpdate">
+<span class="sig-name descname"><span class="pre">frameUpdate</span></span><a class="headerlink" href="#Industrial_Vision.Worker1.frameUpdate" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.Worker1.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Worker1.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Worker1.run" title="Permalink to this definition">#</a></dt>
+<dd><p>Starts the worker thread and performs image processing.</p>
+<p>This method runs in a loop, continuously capturing frames from the camera, processing them according to the
+specified image processing type, and emitting signals to update the UI with the processed frames.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.Worker1.stop">
+<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Worker1.stop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Worker1.stop" title="Permalink to this definition">#</a></dt>
+<dd><p>Stop the execution of the class.</p>
+<p>This method sets the ‘ThreadActive’ flag to False and quits the execution of the class.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.Worker1.timacsses">
+<span class="sig-name descname"><span class="pre">timacsses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ti</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Worker1.timacsses"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Worker1.timacsses" title="Permalink to this definition">#</a></dt>
+<dd><p>Set the value of ‘timact’ attribute.</p>
+<p>Parameters:
+ti (float): The value to set for ‘timact’.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.Worker1.trait">
+<span class="sig-name descname"><span class="pre">trait</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Worker1.trait"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Worker1.trait" title="Permalink to this definition">#</a></dt>
+<dd><p>Set the value of ‘traitement’ attribute.</p>
+<p>Parameters:
+t (str): The value to set for ‘traitement’.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.Worker1.traitth1">
+<span class="sig-name descname"><span class="pre">traitth1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Worker1.traitth1"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Worker1.traitth1" title="Permalink to this definition">#</a></dt>
+<dd><p>Set the value of ‘th1’ attribute.</p>
+<p>Parameters:
+t (int): The value to set for ‘th1’.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.Worker1.traitth2">
+<span class="sig-name descname"><span class="pre">traitth2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Worker1.traitth2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Worker1.traitth2" title="Permalink to this definition">#</a></dt>
+<dd><p>Set the value of ‘th2’ attribute.</p>
+<p>Parameters:
+t (int): The value to set for ‘th2’.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Industrial_Vision.Worker2">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Industrial_Vision.</span></span><span class="sig-name descname"><span class="pre">Worker2</span></span><a class="reference internal" href="_modules/Industrial_Vision.html#Worker2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Worker2" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QThread</span></code></p>
+<p>A worker class for performing tasks in a separate thread.</p>
+<p>This class inherits from QThread and is designed to perform certain operations in the background.
+It utilizes the IAcouleurs class for image color representation and shape classification using a neural network.
+The goal of this class is to process images, perform classification, and send classification information to a nuclei card
+to activate motors.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="Industrial_Vision.Worker2.PrediUpdate">
+<span class="sig-name descname"><span class="pre">PrediUpdate</span></span><a class="headerlink" href="#Industrial_Vision.Worker2.PrediUpdate" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.Worker2.detection">
+<span class="sig-name descname"><span class="pre">detection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Worker2.detection"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Worker2.detection" title="Permalink to this definition">#</a></dt>
+<dd><p>Process the detection results and send commands to activate motors based on the classification.</p>
+<p>This method checks the detection results stored in <cite>tab1</cite>, <cite>tab2</cite>, and <cite>tab3</cite> lists.
+If any of the lists contains non-zero values, it determines the corresponding action to take based on the values.
+If the values in <cite>tab1</cite> indicate a classification result, it sends a command to activate motor1.
+If the values in <cite>tab2</cite> indicate a classification result, it sends a command to activate motor2.
+If the values in <cite>tab3</cite> indicate a classification result, it sends a command to activate motor3.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.Worker2.pr">
+<span class="sig-name descname"><span class="pre">pr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Imagecv</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Worker2.pr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Worker2.pr" title="Permalink to this definition">#</a></dt>
+<dd><p>Perform image processing and prediction.</p>
+<p>This method receives an image, performs image processing and prediction using the ‘classification’ and ‘classi2’
+methods of the ‘IAcouleurs’ class. It emits the prediction through the ‘PrediUpdate’ signal.</p>
+<p>The ‘IAcouleurs’ class represents an image color and a shape classification tool using a neural network.</p>
+<p>The goal of this function is to send the information of the classification to a nuclei card to activate motors.
+It determines the most likely prediction by comparing several frame predictions during the passage of an object
+in front of the camera.</p>
+<p>Parameters:
+Imagecv (cv2.Image): The input image for prediction.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.Worker2.stop">
+<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Worker2.stop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Worker2.stop" title="Permalink to this definition">#</a></dt>
+<dd><p>Stop the Worker2 class execution.</p>
+<p>This method closes the serial connection with the card and stops the execution of the Worker2 class.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.Worker2.traitth1">
+<span class="sig-name descname"><span class="pre">traitth1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Worker2.traitth1"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Worker2.traitth1" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="IA_training.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">IA_training module</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="modules.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Modules</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, Alex6Crbt
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Industrial_Vision module</a><ul>
+<li><a class="reference internal" href="#Industrial_Vision.Couleurim"><code class="docutils literal notranslate"><span class="pre">Couleurim</span></code></a><ul>
+<li><a class="reference internal" href="#Industrial_Vision.Couleurim.r"><code class="docutils literal notranslate"><span class="pre">Couleurim.r</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Couleurim.g"><code class="docutils literal notranslate"><span class="pre">Couleurim.g</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Couleurim.b"><code class="docutils literal notranslate"><span class="pre">Couleurim.b</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Couleurim.argr"><code class="docutils literal notranslate"><span class="pre">Couleurim.argr</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Couleurim.argg"><code class="docutils literal notranslate"><span class="pre">Couleurim.argg</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Couleurim.argb"><code class="docutils literal notranslate"><span class="pre">Couleurim.argb</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Couleurim.nc"><code class="docutils literal notranslate"><span class="pre">Couleurim.nc</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Couleurim.affichage"><code class="docutils literal notranslate"><span class="pre">Couleurim.affichage()</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Couleurim.couleur_proche"><code class="docutils literal notranslate"><span class="pre">Couleurim.couleur_proche()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Industrial_Vision.IAFormes"><code class="docutils literal notranslate"><span class="pre">IAFormes</span></code></a><ul>
+<li><a class="reference internal" href="#Industrial_Vision.IAFormes.__test"><code class="docutils literal notranslate"><span class="pre">IAFormes.__test</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.IAFormes.__mlp2"><code class="docutils literal notranslate"><span class="pre">IAFormes.__mlp2</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.IAFormes.x_test"><code class="docutils literal notranslate"><span class="pre">IAFormes.x_test</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.IAFormes.y_test"><code class="docutils literal notranslate"><span class="pre">IAFormes.y_test</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.IAFormes.xt"><code class="docutils literal notranslate"><span class="pre">IAFormes.xt</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.IAFormes.yt"><code class="docutils literal notranslate"><span class="pre">IAFormes.yt</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.IAFormes.Proba"><code class="docutils literal notranslate"><span class="pre">IAFormes.Proba()</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.IAFormes.Proba2"><code class="docutils literal notranslate"><span class="pre">IAFormes.Proba2()</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.IAFormes.matconf"><code class="docutils literal notranslate"><span class="pre">IAFormes.matconf()</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.IAFormes.montreimage"><code class="docutils literal notranslate"><span class="pre">IAFormes.montreimage()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Industrial_Vision.IAcouleurs"><code class="docutils literal notranslate"><span class="pre">IAcouleurs</span></code></a><ul>
+<li><a class="reference internal" href="#Industrial_Vision.IAcouleurs.IA"><code class="docutils literal notranslate"><span class="pre">IAcouleurs.IA</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.IAcouleurs.__livemode"><code class="docutils literal notranslate"><span class="pre">IAcouleurs.__livemode</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.IAcouleurs.afficheinfo"><code class="docutils literal notranslate"><span class="pre">IAcouleurs.afficheinfo()</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.IAcouleurs.aquisi"><code class="docutils literal notranslate"><span class="pre">IAcouleurs.aquisi()</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.IAcouleurs.classi2"><code class="docutils literal notranslate"><span class="pre">IAcouleurs.classi2()</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.IAcouleurs.classification"><code class="docutils literal notranslate"><span class="pre">IAcouleurs.classification()</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.IAcouleurs.resize"><code class="docutils literal notranslate"><span class="pre">IAcouleurs.resize()</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.IAcouleurs.seuil"><code class="docutils literal notranslate"><span class="pre">IAcouleurs.seuil()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Industrial_Vision.Window"><code class="docutils literal notranslate"><span class="pre">Window</span></code></a><ul>
+<li><a class="reference internal" href="#Industrial_Vision.Window.Worker1"><code class="docutils literal notranslate"><span class="pre">Window.Worker1</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Window.Worker2"><code class="docutils literal notranslate"><span class="pre">Window.Worker2</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Window.Methods"><code class="docutils literal notranslate"><span class="pre">Window.Methods</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Window.CancelFeed"><code class="docutils literal notranslate"><span class="pre">Window.CancelFeed()</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Window.ImageUpdate"><code class="docutils literal notranslate"><span class="pre">Window.ImageUpdate</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Window.ImageUpdateSlot"><code class="docutils literal notranslate"><span class="pre">Window.ImageUpdateSlot()</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Window.PrediUpdate"><code class="docutils literal notranslate"><span class="pre">Window.PrediUpdate</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Window.PrediUpdateSlot"><code class="docutils literal notranslate"><span class="pre">Window.PrediUpdateSlot()</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Window.changeim"><code class="docutils literal notranslate"><span class="pre">Window.changeim()</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Window.changet"><code class="docutils literal notranslate"><span class="pre">Window.changet()</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Window.changettr1"><code class="docutils literal notranslate"><span class="pre">Window.changettr1()</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Window.fin"><code class="docutils literal notranslate"><span class="pre">Window.fin()</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Window.marcheCl"><code class="docutils literal notranslate"><span class="pre">Window.marcheCl()</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Window.traitim"><code class="docutils literal notranslate"><span class="pre">Window.traitim()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Industrial_Vision.Worker1"><code class="docutils literal notranslate"><span class="pre">Worker1</span></code></a><ul>
+<li><a class="reference internal" href="#Industrial_Vision.Worker1.ImageUpdate"><code class="docutils literal notranslate"><span class="pre">Worker1.ImageUpdate</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Worker1.frameUpdate"><code class="docutils literal notranslate"><span class="pre">Worker1.frameUpdate</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Worker1.run"><code class="docutils literal notranslate"><span class="pre">Worker1.run()</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Worker1.stop"><code class="docutils literal notranslate"><span class="pre">Worker1.stop()</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Worker1.timacsses"><code class="docutils literal notranslate"><span class="pre">Worker1.timacsses()</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Worker1.trait"><code class="docutils literal notranslate"><span class="pre">Worker1.trait()</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Worker1.traitth1"><code class="docutils literal notranslate"><span class="pre">Worker1.traitth1()</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Worker1.traitth2"><code class="docutils literal notranslate"><span class="pre">Worker1.traitth2()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#Industrial_Vision.Worker2"><code class="docutils literal notranslate"><span class="pre">Worker2</span></code></a><ul>
+<li><a class="reference internal" href="#Industrial_Vision.Worker2.PrediUpdate"><code class="docutils literal notranslate"><span class="pre">Worker2.PrediUpdate</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Worker2.detection"><code class="docutils literal notranslate"><span class="pre">Worker2.detection()</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Worker2.pr"><code class="docutils literal notranslate"><span class="pre">Worker2.pr()</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Worker2.stop"><code class="docutils literal notranslate"><span class="pre">Worker2.stop()</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Worker2.traitth1"><code class="docutils literal notranslate"><span class="pre">Worker2.traitth1()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/scripts/furo.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    </body>
+</html>
