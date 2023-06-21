@@ -30,7 +30,7 @@ extensions = [
 templates_path = ['_templates']
 exclude_patterns = []
 
-autodoc_mock_imports = ["pyueye","serial.tools.list_ports","Serial",]
+autodoc_mock_imports = ["pyueye","serial.tools.list_ports","Serial","cv2"]
 #"PyQt5","numpy","sklearn","PIL","scipy","matplotlib","pandas","numpy.core","numpy"
 
 # -- Options for HTML output -------------------------------------------------
