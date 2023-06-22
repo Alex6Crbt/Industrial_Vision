@@ -13,8 +13,8 @@ Welcome to Industrial_Vision, a Python-based project that combines computer visi
     <br />
     <a href="https://github.com/Alex6Crbt/Industrial_Vision">See a demo</a>
     ·
-    <a href="https://github.com/Alex6Crbt/Industrial_Vision/issues">Reporter un bug</a>
+    <a href="https://github.com/Alex6Crbt/Industrial_Vision/issues">Report a bug</a>
     ·
-    <a href="https://github.com/Alex6Crbt/Industrial_Vision/issues">Demander une fonctionnalité</a>
+    <a href="https://github.com/Alex6Crbt/Industrial_Vision/issues">Ask for a feature</a>
   </p>
 </div>
