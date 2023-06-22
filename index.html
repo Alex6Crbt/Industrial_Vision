@@ -141,7 +141,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -164,7 +164,6 @@
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Usage.html">Quickstart</a></li>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="about_the_project.html">About the project</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="modules.html">Modules</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Modules</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="Industrial_Vision.html">Industrial_Vision module</a></li>
@@ -200,7 +199,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -214,17 +213,66 @@
 <p class="admonition-title">Caution</p>
 <p>This website is still a work in progress</p>
 </div>
+<p>Welcome to Industrial_Vision, a Python-based project that combines computer vision,
+artificial intelligence, and servo motors to automate a sorting process
+based on shape recognition.</p>
+<a class="reference internal image-reference" href="_images/captconv.png"><img alt="_images/captconv.png" class="align-center" src="_images/captconv.png" style="width: 600px;" /></a>
+<p>With a camera positioned above a conveyor belt, the system captures multiple images
+and utilizes a live feed to recognizes shapes with a pretrained AI model.
+The sorted objects are then directed to appropriate
+locations using servo motors, providing an efficient and streamlined sorting solution.</p>
+<section id="project-overview">
+<h2>Project Overview<a class="headerlink" href="#project-overview" title="Permalink to this heading">#</a></h2>
+<p>With Industrial_Vision, the primary objective is to develop a practical system that
+can accurately identify and sort objects based on their shapes and their color.</p>
+<p>The system user has access to an UI to select different system parameters such as different
+sorting options, different camera preprocessing options.</p>
+<a class="reference internal image-reference" href="_images/captui.png"><img alt="_images/captui.png" class="align-center" src="_images/captui.png" style="width: 600px;" /></a>
+<p>Shape recognition is achived by implementing a camera system above a conveyor belt to capture images of
+objects passing through. The images are then processed using computer vision techniques,
+and the extracted features are fed into an AI model for shape recognition and color recognition.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Industrial_Vision</span></span></dt>
+<dd><p>Documentation of the <a class="reference internal" href="Industrial_Vision.html#module-Industrial_Vision" title="Industrial_Vision"><code class="xref py py-class docutils literal notranslate"><span class="pre">Industrial_Vision()</span></code></a> module.</p>
+</dd></dl>
+
+</div>
+<p>To train the AI model, we use the scikit-learn library in Python, we also developed the training algorithm
+for the AI model.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IA_training</span></span></dt>
+<dd><p>Documentation of the <a class="reference internal" href="IA_training.html#module-IA_training" title="IA_training"><code class="xref py py-class docutils literal notranslate"><span class="pre">IA_training()</span></code></a> module.</p>
+</dd></dl>
+
+</div>
+<p>To generate a database for training the AI model, we have implemented code that
+captures images of objects as they move along the conveyor belt. These images
+are labeled according to their corresponding shapes, creating a diverse dataset
+that enables the AI model to learn and classify shapes effectively.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Create_DDB</span></span></dt>
+<dd><p>Documentation of the <a class="reference internal" href="Create_DDB.html#module-Create_DDB" title="Create_DDB"><code class="xref py py-class docutils literal notranslate"><span class="pre">Create_DDB</span></code></a>  module.</p>
+</dd></dl>
+
+</div>
+<p>Once the AI model identifies the shape and the color of an object, it sends a signal to a Nucleo STM32 card (coded in <cite>C++</cite> via <a class="reference external" href="https://studio.keil.arm.com/">Keil studio</a>)
+to trigger the servo motors integrated into the conveyor belt system.</p>
+<a class="reference internal image-reference" href="_images/nucleoSTM32.png"><img alt="_images/nucleoSTM32.png" class="align-center" src="_images/nucleoSTM32.png" style="width: 300px;" /></a>
+<p>Finally this is how the objects arriving on the conveyor belt are sorted !</p>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Usage.html">Quickstart</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Usage.html#installation">Installation</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#project-overview">Project Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#key-features">Key Features</a></li>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#conclusion">Conclusion</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="about_the_project.html">About the project</a><ul>
@@ -240,12 +288,12 @@
 </ul>
 </div>
 </section>
+</section>
 <section id="indices-and-tables">
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
 <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
-<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
 </ul>
 </section>
 
@@ -282,8 +330,28 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Welcome to Industrial_Vision’s documentation!</a><ul>
+<li><a class="reference internal" href="#project-overview">Project Overview</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
