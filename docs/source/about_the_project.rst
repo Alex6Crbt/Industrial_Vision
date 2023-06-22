@@ -17,7 +17,7 @@ for an image coming from the camera that is to say in high definition of `1280×
 then the number of parameters to train for a network of 256 neurons is\: 
 
 .. math::
-    w_{tot} \~ 1280×720×256 ≈ 2⋅10^8 . 
+    w_{tot} \sim 1280×720×256 ≈ 2⋅10^8 . 
 
 Another good order of magnitude as to the number of images to train the algorithm in our case, 
 is to at least have the same order of magnitude of number of images as number of parameters. 
