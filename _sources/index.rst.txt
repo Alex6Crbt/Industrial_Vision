@@ -6,6 +6,13 @@
 Welcome to Industrial_Vision's documentation!
 =============================================
 
+
+.. image:: https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white
+
+.. image:: https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white
+
+
+
 .. caution::
    This website is still a work in progress
 
@@ -15,11 +22,11 @@ Welcome to Industrial_Vision's documentation!
    :caption: Contents:
    
    
+   Usage
+
    introduction
 
    about_the_project
-   
-   Usage
    
    modules
 

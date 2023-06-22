@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Modules" href="modules.html" /><link rel="prev" title="About the project" href="about_the_project.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Introduction" href="introduction.html" /><link rel="prev" title="Welcome to Industrial_Vision’s documentation!" href="index.html" />
 
     <!-- Generated with Sphinx 7.0.1 and Furo 2023.05.20 -->
-        <title>Usage - Industrial_Vision 1.0 documentation</title>
+        <title>Quickstart - Industrial_Vision 1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=e6660623a769aa55fea372102b9bf3151b292993" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
@@ -163,9 +163,9 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Quickstart</a></li>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="about_the_project.html">About the project</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Usage</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="modules.html">Modules</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Modules</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="Industrial_Vision.html">Industrial_Vision module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="IA_training.html">IA_training module</a></li>
@@ -206,81 +206,68 @@
           </label>
         </div>
         <article role="main">
-          <section id="usage">
-<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">#</a></h1>
+          <section id="quickstart">
+<h1>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this heading">#</a></h1>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
 <p>This website is still a work in progress</p>
 </div>
-<p>To use the Industrial_Vision library for shape recognition and sorting automation,
-you need to follow the installation steps outlined below.</p>
+<p>To use the Industrial_Vision library please follow the installation steps outlined below.</p>
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h2>
-<p>1. <strong>Prerequisites</strong>: Ensure that you have Python 3.x installed on your system.
+<p>1. <strong>Prerequisites</strong>: Ensure that you have Python 3.9 installed on your system.
 If you don’t have Python installed, you can download it from the official Python
 website (<a class="reference external" href="https://www.python.org">https://www.python.org</a>).</p>
 <p>2. <strong>Create a Virtual Environment (Optional)</strong>: It is recommended to create a
 virtual environment to keep the project dependencies isolated. Open a terminal
 or command prompt and run the following commands:</p>
-<blockquote>
-<div><p>On macOS and Linux:</p>
-</div></blockquote>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go"> python3 -m venv myenv</span>
-<span class="go"> source myenv/bin/activate</span>
-
-
-<span class="go">On Windows\:</span>
+<ul class="simple">
+<li><p>On macOS and Linux:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python3 -m venv myenv</span>
+<span class="go">source myenv/bin/activate</span>
 </pre></div>
 </div>
+<ul class="simple">
+<li><p>On Windows:</p></li>
+</ul>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python -m venv myenv</span>
 <span class="go">myenv\Scripts\activate</span>
 </pre></div>
 </div>
 <p>3. <strong>Install Required Packages</strong>: In the activated virtual environment or your
 global Python environment, run the following command to install the necessary packages:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go"> pip install scikit-learn opencv-python</span>
-
-<span class="go">This command installs the scikit-learn library, which is used for training</span>
-<span class="go">the AI model, and the OpenCV library (opencv-python), which provides computer</span>
-<span class="go">vision functionalities.</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pip install -r requirements.txt</span>
 </pre></div>
 </div>
 <p>4. <strong>Download Industrial_Vision Library</strong>: Download the Industrial_Vision library
 from the project repository or source. You can either clone the repository or
 download the source code as a ZIP file.</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>If you are using Git, clone the repository by running the following command
-in your terminal or command prompt:</p></li>
+<ul class="simple">
+<li><dl class="simple">
+<dt>If you are using Git, clone the repository by running the following command</dt><dd><p>in your terminal or command prompt:</p>
+</dd>
+</dl>
+</li>
 </ul>
-</div></blockquote>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go"> git clone https://github.com/username/project-name.git</span>
-
-
-<span class="go">- If you downloaded the ZIP file, extract it to a directory of your choice.</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/username/project-name.git</span>
 </pre></div>
 </div>
+<ul class="simple">
+<li><p>If you downloaded the ZIP file, extract it to a directory of your choice.</p></li>
+</ul>
 <p>5. <strong>Importing the Library</strong>: Once the library is downloaded, navigate to the
 project directory and import it into your Python script or interactive session
 using the following import statement:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">Industrial</span>\<span class="n">_Vision</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">Industrial_Vision</span>
 </pre></div>
 </div>
-<p>6. <strong>Initializing and Utilizing the Library</strong>: Follow the documentation or
-examples provided with the Industrial_Vision library to initialize the camera
-system, configure the sorting mechanism with servo motors, and utilize the shape
-recognition capabilities.</p>
-<p>7. <strong>Running the Application</strong>: Execute your Python script or interact with the
-Industrial_Vision library using the appropriate commands and functions as described
-in the library’s documentation.</p>
-</section>
-<section id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
-<p>By following the steps outlined in this Usage guide, you can successfully install
-the Industrial_Vision library and begin utilizing its capabilities for shape
-recognition and sorting automation. Ensure that you have the necessary prerequisites
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Now that you have all the necessary prerequisites
 and dependencies installed, and don’t forget to consult the library’s documentation
-for further guidance on initialization, configuration, and usage.</p>
+for further guidance on usage and the different algorithms.</p>
+</div>
 </section>
 </section>
 
@@ -289,23 +276,23 @@ for further guidance on initialization, configuration, and usage.</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="modules.html">
+          <a class="next-page" href="introduction.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Modules</div>
+                <div class="title">Introduction</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="about_the_project.html">
+          <a class="prev-page" href="index.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">About the project</div>
+                <div class="title">Home</div>
                 
               </div>
             </a>
@@ -339,9 +326,8 @@ for further guidance on initialization, configuration, and usage.</p>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Usage</a><ul>
+<li><a class="reference internal" href="#">Quickstart</a><ul>
 <li><a class="reference internal" href="#installation">Installation</a></li>
-<li><a class="reference internal" href="#conclusion">Conclusion</a></li>
 </ul>
 </li>
 </ul>

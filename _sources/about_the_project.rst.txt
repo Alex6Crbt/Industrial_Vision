@@ -10,14 +10,14 @@ Model design
 ------------
 
 Let's start with a small order of magnitude calculation\: the neural network that is used 
-here and whose operation will be detailed later, contains 256 neurons in its first layer, 
+here and whose operation will be detailed later, contains `256` neurons in its first layer, 
 and each of these neurons is connected to each pixel of the input image. Thus since in this 
 model the number of parameters to train per neuron is proportional to the number of input, 
-for an image coming from the camera that is to say in high definition of 1280×720 pixels 
+for an image coming from the camera that is to say in high definition of `1280×720` pixels 
 then the number of parameters to train for a network of 256 neurons is\: 
 
 .. math::
-    w_tot~ 1280×720×256 ≈2⋅10^8 . 
+    w_{tot} \~ 1280×720×256 ≈ 2⋅10^8 . 
 
 Another good order of magnitude as to the number of images to train the algorithm in our case, 
 is to at least have the same order of magnitude of number of images as number of parameters. 
@@ -42,7 +42,7 @@ Voici le schéma du traitement appliqué à une image provenant de la caméra \:
    :width: 1000px
 
 
-finally the final image is therefore composed of 3264 pixels, is in shades of gray, 
+Finally the final image is therefore composed of 3264 pixels, is in shades of gray, 
 and includes all its pixels of the background with a pixel value of 0 out of 255.
 The image can therefore be transformed into a numpy vector\:
 

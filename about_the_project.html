@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Usage" href="Usage.html" /><link rel="prev" title="Introduction" href="introduction.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Modules" href="modules.html" /><link rel="prev" title="Introduction" href="introduction.html" />
 
     <!-- Generated with Sphinx 7.0.1 and Furo 2023.05.20 -->
         <title>About the project - Industrial_Vision 1.0 documentation</title>
@@ -163,9 +163,9 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Usage.html">Quickstart</a></li>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">About the project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Usage.html">Usage</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="modules.html">Modules</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Modules</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="Industrial_Vision.html">Industrial_Vision module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="IA_training.html">IA_training module</a></li>
@@ -215,14 +215,14 @@
 <section id="model-design">
 <h2>Model design<a class="headerlink" href="#model-design" title="Permalink to this heading">#</a></h2>
 <p>Let’s start with a small order of magnitude calculation: the neural network that is used
-here and whose operation will be detailed later, contains 256 neurons in its first layer,
+here and whose operation will be detailed later, contains <cite>256</cite> neurons in its first layer,
 and each of these neurons is connected to each pixel of the input image. Thus since in this
 model the number of parameters to train per neuron is proportional to the number of input,
-for an image coming from the camera that is to say in high definition of 1280×720 pixels
+for an image coming from the camera that is to say in high definition of <cite>1280×720</cite> pixels
 then the number of parameters to train for a network of 256 neurons is:</p>
 <div class="math-wrapper docutils container">
 <div class="math notranslate nohighlight">
-\[w_tot~ 1280×720×256 ≈2⋅10^8 .\]</div>
+\[w_{tot} \~ 1280×720×256 ≈ 2⋅10^8 .\]</div>
 </div>
 <p>Another good order of magnitude as to the number of images to train the algorithm in our case,
 is to at least have the same order of magnitude of number of images as number of parameters.
@@ -235,7 +235,7 @@ a neural network must extract from an image the important characteristics (featu
 of the object of interest in order to to be able to distinguish it with precision.</p>
 <p>Voici le schéma du traitement appliqué à une image provenant de la caméra :</p>
 <a class="reference internal image-reference" href="_images/schema1.jpg"><img alt="Texte alternatif de l'image" class="align-center" src="_images/schema1.jpg" style="width: 1000px;" /></a>
-<p>finally the final image is therefore composed of 3264 pixels, is in shades of gray,
+<p>Finally the final image is therefore composed of 3264 pixels, is in shades of gray,
 and includes all its pixels of the background with a pixel value of 0 out of 255.
 The image can therefore be transformed into a numpy vector:</p>
 <a class="reference internal image-reference" href="_images/schema2.png"><img alt="Texte alternatif de l'image" class="align-center" src="_images/schema2.png" style="width: 600px;" /></a>
@@ -290,12 +290,12 @@ This can be represented by the following formula:</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="Usage.html">
+          <a class="next-page" href="modules.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Usage</div>
+                <div class="title">Modules</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
