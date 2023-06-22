@@ -7,7 +7,7 @@ Introduction
 
 
 Welcome to Industrial_Vision, a Python-based project that combines computer vision, 
-artificial intelligence (AI), and servo motors to automate the sorting process 
+artificial intelligence, and servo motors to automate a sorting process 
 based on shape recognition. With a camera positioned above a conveyor belt, this 
 innovative project captures multiple images and utilizes live feed to train an AI 
 model that recognizes shapes. The sorted objects are then directed to appropriate 
@@ -16,21 +16,23 @@ locations using servo motors, providing an efficient and streamlined sorting sol
 Project Overview
 ----------------
 
-With Industrial_Vision, our primary objective is to develop a practical system that 
-can accurately identify and sort objects based on their shapes. We achieve this
-by implementing a camera system above a conveyor belt to capture images of 
-objects in real-time. These images are processed using computer vision techniques,
+With Industrial_Vision, the primary objective is to develop a practical system that 
+can accurately identify and sort objects based on their shapes. 
+
+Shape recognition is achived by implementing a camera system above a conveyor belt to capture images of 
+objects passing through. 
+
+The images are processed using computer vision techniques,
 and the extracted features are fed into an AI model for shape recognition.
+
+To train the AI model, Using the scikit-learn library in Python, we have developed a training algorithm
+for the AI model.
 
 To generate a database for training the AI model, we have implemented code that
 captures images of objects as they move along the conveyor belt. These images 
 are labeled according to their corresponding shapes, creating a diverse dataset
 that enables the AI model to learn and classify shapes effectively.
 
-Using the scikit-learn library in Python, we have developed a training algorithm
-for the AI model. Scikit-learn provides a wide range of machine learning algorithms,
-making it suitable for our shape recognition task. Through iterations of training 
-and optimization, the AI model becomes increasingly accurate in recognizing different shapes.
 
 Once the AI model identifies the shape of an object, servo motors integrated into 
 the conveyor belt system are triggered to sort the objects into appropriate locations. 

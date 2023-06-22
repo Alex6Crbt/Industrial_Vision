@@ -30,7 +30,7 @@ extensions = [
 templates_path = ['_templates']
 exclude_patterns = []
 
-autodoc_mock_imports = ["pyueye","serial.tools.list_ports","Serial",]
+autodoc_mock_imports = ["pyueye","serial.tools.list_ports","Serial","cv2","webcolors","serial"]
 #"PyQt5","numpy","sklearn","PIL","scipy","matplotlib","pandas","numpy.core","numpy"
 
 # -- Options for HTML output -------------------------------------------------
@@ -39,7 +39,7 @@ autodoc_mock_imports = ["pyueye","serial.tools.list_ports","Serial",]
 html_theme = 'furo'
 html_static_path = ['_static']
 
-html_logo = "logo.png"
+# html_logo = "logo.png"
 
 html_theme_options = {
     "light_css_variables": {
