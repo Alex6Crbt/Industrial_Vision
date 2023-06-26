@@ -31,9 +31,9 @@ class EntrainementIA:
         This method imports the preprocessed databases, sets up the training and testing data,
         configures the MLP classifier, and performs the training.
 
-        Note:
-        - The preprocessed databases should be stored in CSV files with specific filenames.
-        - The MLP classifier hyperparameters can be adjusted within the method.
+        .. warning::
+            - The preprocessed databases should be stored in CSV files with specific filenames.
+            - The MLP classifier hyperparameters can be adjusted within the method.
         """
 
         # Importing and setting up the training data

@@ -1,7 +1,7 @@
 IA\_training module
 ===================
 
-The EntrainementIA algorithm is designed to train an artificial neural network, specifically a Multi-Layer Perceptron (MLP), using preprocessed databases. The algorithm performs several steps to simplify the problem and improve the training process.
+The EntrainementIA algorithm is designed to train an artificial neural network, specifically a Multi-Layer Perceptron (MLP), using the preprocessed databases.
 
 The algorithm begins by importing the preprocessed databases, which contain data in the form required for training the MLP. These databases include different shapes such as squares, circles, triangles, pentagons, and stars. The data from each shape is organized and combined into a single dataset.
 
@@ -20,10 +20,10 @@ The algorithm includes additional functionalities, such as displaying individual
    The algorithm also provides the ability to save the trained model's weights for future use. 
    It also allows loading previously saved weights to set the MLP model's parameters.
 
-Overall, the EntrainementIA algorithm simplifies the problem of training an MLP by preprocessing the databases, configuring the model, and providing insights into its performance. It serves as a tool for training and evaluating MLP models for shape classification tasks.
 
 
 .. automodule:: IA_training
    :members:
-   :undoc-members:
+   :special-members: __init__
+   
    :show-inheritance:

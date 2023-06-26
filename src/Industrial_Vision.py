@@ -313,7 +313,7 @@ class IAcouleurs:
 
     Attributes:
         IA (IAFormes): Instance of the IAFormes class for shape classification.
-        __livemode (bool): Flag indicating whether the live mode is enabled or not.
+        livemode (bool): Flag indicating whether the live mode is enabled or not.
     """
 
     def __init__(self, livemode=True):
@@ -471,18 +471,6 @@ class Window(QWidget):
     Attributes:
         Worker1 (Worker1): Worker1 instance for capturing frames from the camera and applying filters.
         Worker2 (Worker2): Worker2 instance for image processing and prediction.
-
-        Methods:
-            __init__(self, parent=None): Initializes the Window object and sets up the user interface.
-            CancelFeed(self): Cancels the video feed and stops the workers.
-            changet(self): Slot for handling changes in the time interval.
-            changeim(self, c): Slot for handling changes in the image processing mode.
-            changettr1(self): Slot for handling changes in the threshold value.
-            ImageUpdateSlot(self, Image): Slot for updating the displayed image.
-            PrediUpdateSlot(self, pred): Slot for updating the prediction result.
-            traitim(self, val): Slot for handling changes in the image processing mode.
-            fin(self): Slot for stopping the workers.
-            marcheCl(self): Slot for starting the workers and configuring the processing parameters.
     """
 
     ImageUpdate = pyqtSignal(QImage)
