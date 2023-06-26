@@ -20,7 +20,7 @@ Welcome to Industrial_Vision's documentation!
 
 Welcome to Industrial_Vision, a Python-based project that combines computer vision, 
 artificial intelligence, and servo motors to automate a sorting process 
-based on shape recognition.
+based on shape recognition !
 
 .. image:: _static/captconv.png
    :align: center

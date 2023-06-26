@@ -230,16 +230,16 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="EntrainementIA.__init__"><a class="viewcode-back" href="../IA_training.html#IA_training.EntrainementIA.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Initialize the EntrainementIA class.</span>
 
 <span class="sd">        This method imports the preprocessed databases, sets up the training and testing data,</span>
 <span class="sd">        configures the MLP classifier, and performs the training.</span>
 
-<span class="sd">        Note:</span>
-<span class="sd">        - The preprocessed databases should be stored in CSV files with specific filenames.</span>
-<span class="sd">        - The MLP classifier hyperparameters can be adjusted within the method.</span>
+<span class="sd">        .. warning::</span>
+<span class="sd">            - The preprocessed databases should be stored in CSV files with specific filenames.</span>
+<span class="sd">            - The MLP classifier hyperparameters can be adjusted within the method.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="c1"># Importing and setting up the training data</span>
@@ -274,7 +274,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">Fit</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">afficheinfo</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">Impoids</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">matconf</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">matconf</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="EntrainementIA.Fit"><a class="viewcode-back" href="../IA_training.html#IA_training.EntrainementIA.Fit">[docs]</a>    <span class="k">def</span> <span class="nf">Fit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>

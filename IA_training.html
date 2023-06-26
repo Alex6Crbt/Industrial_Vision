@@ -207,7 +207,7 @@
         <article role="main">
           <section id="ia-training-module">
 <h1>IA_training module<a class="headerlink" href="#ia-training-module" title="Permalink to this heading">#</a></h1>
-<p>The EntrainementIA algorithm is designed to train an artificial neural network, specifically a Multi-Layer Perceptron (MLP), using preprocessed databases. The algorithm performs several steps to simplify the problem and improve the training process.</p>
+<p>The EntrainementIA algorithm is designed to train an artificial neural network, specifically a Multi-Layer Perceptron (MLP), using the preprocessed databases.</p>
 <p>The algorithm begins by importing the preprocessed databases, which contain data in the form required for training the MLP. These databases include different shapes such as squares, circles, triangles, pentagons, and stars. The data from each shape is organized and combined into a single dataset.</p>
 <p>Next, the algorithm sets up the training and testing data witch will be used to evaluate the trained model’s performance.</p>
 <p>The MLP classifier is configured with specific hyperparameters, such as the number and size of hidden layers, activation function, learning rate, and optimization algorithm. These parameters can be adjusted to optimize the model’s performance.</p>
@@ -219,12 +219,14 @@
 <p>The algorithm also provides the ability to save the trained model’s weights for future use.
 It also allows loading previously saved weights to set the MLP model’s parameters.</p>
 </div>
-<p>Overall, the EntrainementIA algorithm simplifies the problem of training an MLP by preprocessing the databases, configuring the model, and providing insights into its performance. It serves as a tool for training and evaluating MLP models for shape classification tasks.</p>
-<span class="target" id="module-IA_training"></span><dl class="py class">
+<span class="target" id="module-IA_training"></span><dl class="field-list simple">
+<dt class="field-odd">show-inheritance<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<dl class="py class">
 <dt class="sig sig-object py" id="IA_training.EntrainementIA">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">IA_training.</span></span><span class="sig-name descname"><span class="pre">EntrainementIA</span></span><a class="reference internal" href="_modules/IA_training.html#EntrainementIA"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#IA_training.EntrainementIA" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Class for training an artificial neural network (MLP) using the preprocessed databases.</p>
+<dd><p>Class for training an artificial neural network (MLP) using the preprocessed databases.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="IA_training.EntrainementIA.x_train">
 <span class="sig-name descname"><span class="pre">x_train</span></span><a class="headerlink" href="#IA_training.EntrainementIA.x_train" title="Permalink to this definition">#</a></dt>
@@ -292,6 +294,21 @@ It also allows loading previously saved weights to set the MLP model’s paramet
 <span class="sig-name descname"><span class="pre">Impoids</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/IA_training.html#EntrainementIA.Impoids"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#IA_training.EntrainementIA.Impoids" title="Permalink to this definition">#</a></dt>
 <dd><p>Display weight matrices.</p>
 <p>This method displays the weight matrices of the trained model.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="IA_training.EntrainementIA.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/IA_training.html#EntrainementIA.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#IA_training.EntrainementIA.__init__" title="Permalink to this definition">#</a></dt>
+<dd><p>Initialize the EntrainementIA class.</p>
+<p>This method imports the preprocessed databases, sets up the training and testing data,
+configures the MLP classifier, and performs the training.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul class="simple">
+<li><p>The preprocessed databases should be stored in CSV files with specific filenames.</p></li>
+<li><p>The MLP classifier hyperparameters can be adjusted within the method.</p></li>
+</ul>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -411,6 +428,7 @@ to previously saved weights.</p>
 <li><a class="reference internal" href="#IA_training.EntrainementIA.mlp"><code class="docutils literal notranslate"><span class="pre">EntrainementIA.mlp</span></code></a></li>
 <li><a class="reference internal" href="#IA_training.EntrainementIA.Fit"><code class="docutils literal notranslate"><span class="pre">EntrainementIA.Fit()</span></code></a></li>
 <li><a class="reference internal" href="#IA_training.EntrainementIA.Impoids"><code class="docutils literal notranslate"><span class="pre">EntrainementIA.Impoids()</span></code></a></li>
+<li><a class="reference internal" href="#IA_training.EntrainementIA.__init__"><code class="docutils literal notranslate"><span class="pre">EntrainementIA.__init__()</span></code></a></li>
 <li><a class="reference internal" href="#IA_training.EntrainementIA.afficheinfo"><code class="docutils literal notranslate"><span class="pre">EntrainementIA.afficheinfo()</span></code></a></li>
 <li><a class="reference internal" href="#IA_training.EntrainementIA.matconf"><code class="docutils literal notranslate"><span class="pre">EntrainementIA.matconf()</span></code></a></li>
 <li><a class="reference internal" href="#IA_training.EntrainementIA.montreimage"><code class="docutils literal notranslate"><span class="pre">EntrainementIA.montreimage()</span></code></a></li>

@@ -205,13 +205,27 @@
           </label>
         </div>
         <article role="main">
-          <section id="module-Industrial_Vision">
-<span id="industrial-vision-module"></span><h1>Industrial_Vision module<a class="headerlink" href="#module-Industrial_Vision" title="Permalink to this heading">#</a></h1>
+          <section id="industrial-vision-module">
+<h1>Industrial_Vision module<a class="headerlink" href="#industrial-vision-module" title="Permalink to this heading">#</a></h1>
+<p>This code package provides a Qt user interface class, along with two worker classes:</p>
+<p>Worker1 for live video feed and image processing, and Worker2 for shape and color recognition, powered by the <code class="xref py py-class docutils literal notranslate"><span class="pre">IAcouleurs</span></code> class, itself poxered by <code class="xref py py-class docutils literal notranslate"><span class="pre">IAFormes</span></code>
+and <code class="xref py py-class docutils literal notranslate"><span class="pre">Couleurim</span></code> class.</p>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Qt User Interface Class</strong>: The Qt user interface class provides an interactive and intuitive graphical interface for the Industrial Vision system. It enables users to interact with the system, configure settings, visualize real-time video feed, send information to the Nucleo card, and receive the recognition results.</p></li>
+<li><p><strong>Worker1 Class</strong>: The Worker1 class is responsible for capturing live video feed and performing image processing operations. This class plays a vital role in preprocessing the images to ensure accurate and reliable shape and color recognition.</p></li>
+<li><p><strong>Worker2 Class</strong>: The Worker2 class combines the power of AI models with shape and color recognition. It utilizes IAcouleur Class to perform analysis on preprocessed images.</p></li>
+<li><p><strong>IAcouleurs</strong>: The <code class="xref py py-class docutils literal notranslate"><span class="pre">IAcouleurs</span></code> Class is a combination of <cite>IAFormes</cite> and  <cite>Couleurim</cite> class that utilizes the trained machine learning model to recognize various shapes. it is also designed to identify colors in the images. It employs least squares to recognize and classify different colors with high accuracy.</p></li>
+</ol>
+<span class="target" id="module-Industrial_Vision"></span><dl class="field-list simple">
+<dt class="field-odd">show-inheritance<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="Industrial_Vision.Couleurim">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Industrial_Vision.</span></span><span class="sig-name descname"><span class="pre">Couleurim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Foldername</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'images/o1.bmp'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">livemode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Frame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Couleurim"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Couleurim" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Couleurim class represents an image color analysis tool.</p>
+<dd><p>Couleurim class represents an image color analysis tool.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -299,6 +313,21 @@
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.Couleurim.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Foldername</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'images/o1.bmp'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">livemode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Frame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Couleurim.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Couleurim.__init__" title="Permalink to this definition">#</a></dt>
+<dd><p>Initializes the Couleurim object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Foldername</strong> (<em>str</em>) – The path to the image file. Default is ‘images/o1.bmp’.</p></li>
+<li><p><strong>livemode</strong> (<em>bool</em>) – If True, uses a live frame instead of reading an image file. Default is False.</p></li>
+<li><p><strong>Frame</strong> (<em>PIL.Image.Image</em>) – The live frame to analyze. Only used if livemode is True.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="Industrial_Vision.Couleurim.affichage">
 <span class="sig-name descname"><span class="pre">affichage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Couleurim.affichage"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Couleurim.affichage" title="Permalink to this definition">#</a></dt>
 <dd><p>Displays the image with highlighted color channels.</p>
@@ -334,8 +363,7 @@ which uses the analyzed color stored in nc attribute.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="Industrial_Vision.IAFormes">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Industrial_Vision.</span></span><span class="sig-name descname"><span class="pre">IAFormes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Test</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#IAFormes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.IAFormes" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>IAFormes class implements a shape recognition system using a multi-layer perceptron (MLP) classifier.</p>
+<dd><p>IAFormes class implements a shape recognition system using a multi-layer perceptron (MLP) classifier.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>Test</strong> (<em>bool</em>) – If True, initializes the classifier with a test dataset. Default is False.</p>
@@ -442,6 +470,17 @@ which uses the analyzed color stored in nc attribute.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.IAFormes.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Test</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#IAFormes.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.IAFormes.__init__" title="Permalink to this definition">#</a></dt>
+<dd><p>Initializes the IAFormes object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Test</strong> (<em>bool</em>) – If True, initializes the classifier with a test dataset. Default is False.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="Industrial_Vision.IAFormes.matconf">
 <span class="sig-name descname"><span class="pre">matconf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#IAFormes.matconf"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.IAFormes.matconf" title="Permalink to this definition">#</a></dt>
 <dd><p>Displays the confusion matrix based on the predicted labels and true labels of the test dataset.</p>
@@ -470,8 +509,7 @@ which uses the analyzed color stored in nc attribute.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="Industrial_Vision.IAcouleurs">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Industrial_Vision.</span></span><span class="sig-name descname"><span class="pre">IAcouleurs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">livemode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#IAcouleurs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.IAcouleurs" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>IAcouleurs class represents an image color and shape classification tool.</p>
+<dd><p>IAcouleurs class represents an image color and shape classification tool.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>livemode</strong> (<em>bool</em>) – If True, enables live mode for analyzing frames. Default is True.</p>
@@ -489,12 +527,23 @@ which uses the analyzed color stored in nc attribute.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="Industrial_Vision.IAcouleurs.__livemode">
-<span class="sig-name descname"><span class="pre">__livemode</span></span><a class="headerlink" href="#Industrial_Vision.IAcouleurs.__livemode" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="Industrial_Vision.IAcouleurs.livemode">
+<span class="sig-name descname"><span class="pre">livemode</span></span><a class="headerlink" href="#Industrial_Vision.IAcouleurs.livemode" title="Permalink to this definition">#</a></dt>
 <dd><p>Flag indicating whether the live mode is enabled or not.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.IAcouleurs.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">livemode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#IAcouleurs.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.IAcouleurs.__init__" title="Permalink to this definition">#</a></dt>
+<dd><p>Initializes the IAcouleurs object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>livemode</strong> (<em>bool</em>) – If True, enables live mode for analyzing frames. Default is True.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -632,8 +681,7 @@ above or equal to the threshold are kept as is.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="Industrial_Vision.Window">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Industrial_Vision.</span></span><span class="sig-name descname"><span class="pre">Window</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Window"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Window" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QWidget</span></code></p>
-<p>Window class represents the main interface for displaying a video feed and processing images.</p>
+<dd><p>Window class represents the main interface for displaying a video feed and processing images.</p>
 <dl class="simple">
 <dt>Signals:</dt><dd><p>ImageUpdate (QImage): Signal emitted when a new frame is available to update the displayed image.
 PrediUpdate (list): Signal emitted when a new prediction result is available.</p>
@@ -661,31 +709,11 @@ PrediUpdate (list): Signal emitted when a new prediction result is available.</p
 </dl>
 </dd></dl>
 
-<dl class="py attribute">
-<dt class="sig sig-object py" id="Industrial_Vision.Window.Methods">
-<span class="sig-name descname"><span class="pre">Methods</span></span><a class="headerlink" href="#Industrial_Vision.Window.Methods" title="Permalink to this definition">#</a></dt>
-<dd><p>__init__(self, parent=None): Initializes the Window object and sets up the user interface.
-CancelFeed(self): Cancels the video feed and stops the workers.
-changet(self): Slot for handling changes in the time interval.
-changeim(self, c): Slot for handling changes in the image processing mode.
-changettr1(self): Slot for handling changes in the threshold value.
-ImageUpdateSlot(self, Image): Slot for updating the displayed image.
-PrediUpdateSlot(self, pred): Slot for updating the prediction result.
-traitim(self, val): Slot for handling changes in the image processing mode.
-fin(self): Slot for stopping the workers.
-marcheCl(self): Slot for starting the workers and configuring the processing parameters.</p>
-</dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="Industrial_Vision.Window.CancelFeed">
 <span class="sig-name descname"><span class="pre">CancelFeed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Window.CancelFeed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Window.CancelFeed" title="Permalink to this definition">#</a></dt>
 <dd><p>Cancels the video feed and stops the workers.</p>
 </dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="Industrial_Vision.Window.ImageUpdate">
-<span class="sig-name descname"><span class="pre">ImageUpdate</span></span><a class="headerlink" href="#Industrial_Vision.Window.ImageUpdate" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="Industrial_Vision.Window.ImageUpdateSlot">
@@ -698,11 +726,6 @@ marcheCl(self): Slot for starting the workers and configuring the processing par
 </dl>
 </dd></dl>
 
-<dl class="py attribute">
-<dt class="sig sig-object py" id="Industrial_Vision.Window.PrediUpdate">
-<span class="sig-name descname"><span class="pre">PrediUpdate</span></span><a class="headerlink" href="#Industrial_Vision.Window.PrediUpdate" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="Industrial_Vision.Window.PrediUpdateSlot">
 <span class="sig-name descname"><span class="pre">PrediUpdateSlot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pred</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Window.PrediUpdateSlot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Window.PrediUpdateSlot" title="Permalink to this definition">#</a></dt>
@@ -710,6 +733,17 @@ marcheCl(self): Slot for starting the workers and configuring the processing par
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>pred</strong> (<em>list</em>) – The prediction result.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.Window.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Window.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Window.__init__" title="Permalink to this definition">#</a></dt>
+<dd><p>Initializes the Window object and sets up the user interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>parent</strong> (<em>QWidget</em>) – The parent widget. Default is None.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -765,8 +799,7 @@ marcheCl(self): Slot for starting the workers and configuring the processing par
 <dl class="py class">
 <dt class="sig sig-object py" id="Industrial_Vision.Worker1">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Industrial_Vision.</span></span><span class="sig-name descname"><span class="pre">Worker1</span></span><a class="reference internal" href="_modules/Industrial_Vision.html#Worker1"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Worker1" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QThread</span></code></p>
-<p>A worker thread class for image processing.</p>
+<dd><p>A worker thread class for image processing.</p>
 <dl class="simple">
 <dt>Signals:</dt><dd><ul class="simple">
 <li><p>ImageUpdate: A PyQt signal emitted when a processed image is ready to be displayed.</p></li>
@@ -829,16 +862,6 @@ marcheCl(self): Slot for starting the workers and configuring the processing par
 </dl>
 </dd></dl>
 
-<dl class="py attribute">
-<dt class="sig sig-object py" id="Industrial_Vision.Worker1.ImageUpdate">
-<span class="sig-name descname"><span class="pre">ImageUpdate</span></span><a class="headerlink" href="#Industrial_Vision.Worker1.ImageUpdate" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="Industrial_Vision.Worker1.frameUpdate">
-<span class="sig-name descname"><span class="pre">frameUpdate</span></span><a class="headerlink" href="#Industrial_Vision.Worker1.frameUpdate" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="Industrial_Vision.Worker1.run">
 <span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Worker1.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Worker1.run" title="Permalink to this definition">#</a></dt>
@@ -896,16 +919,22 @@ t (int): The value to set for ‘th2’.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="Industrial_Vision.Worker2">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Industrial_Vision.</span></span><span class="sig-name descname"><span class="pre">Worker2</span></span><a class="reference internal" href="_modules/Industrial_Vision.html#Worker2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Worker2" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QThread</span></code></p>
-<p>A worker class for performing tasks in a separate thread.</p>
+<dd><p>A worker class for performing tasks in a separate thread.</p>
 <p>This class inherits from QThread and is designed to perform certain operations in the background.
 It utilizes the IAcouleurs class for image color representation and shape classification using a neural network.
 The goal of this class is to process images, perform classification, and send classification information to a nuclei card
 to activate motors.</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="Industrial_Vision.Worker2.PrediUpdate">
-<span class="sig-name descname"><span class="pre">PrediUpdate</span></span><a class="headerlink" href="#Industrial_Vision.Worker2.PrediUpdate" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="Industrial_Vision.Worker2.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Worker2.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Worker2.__init__" title="Permalink to this definition">#</a></dt>
+<dd><p>Initialize the Worker2 class.</p>
+<p>This method sets up the initial state and configurations for the Worker2 class.
+It allows the user to choose a port for communication with the card that is connected to the computer.</p>
+<p>The Worker2 class initializes various attributes such as image arrays, a color and shape classification tool
+represented by the ‘IAcouleurs’ class, threshold values, and lists for storing predictions.</p>
+<p>After a delay of 10 seconds (time for the other thread to start, so it needs to be increased if your computer runs slow...), it retrieves the available serial ports and prompts the user to select a COM port.
+Once the port is selected, a serial connection is established with the specified port at a baud rate of 115200.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="Industrial_Vision.Worker2.detection">
@@ -939,13 +968,9 @@ Imagecv (cv2.Image): The input image for prediction.</p>
 <p>This method closes the serial connection with the card and stops the execution of the Worker2 class.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="Industrial_Vision.Worker2.traitth1">
-<span class="sig-name descname"><span class="pre">traitth1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Worker2.traitth1"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Worker2.traitth1" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
 </dd></dl>
 
+</section>
 </section>
 
         </article>
@@ -1004,6 +1029,7 @@ Imagecv (cv2.Image): The input image for prediction.</p>
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Industrial_Vision module</a><ul>
+<li><a class="reference internal" href="#features">Features</a><ul>
 <li><a class="reference internal" href="#Industrial_Vision.Couleurim"><code class="docutils literal notranslate"><span class="pre">Couleurim</span></code></a><ul>
 <li><a class="reference internal" href="#Industrial_Vision.Couleurim.r"><code class="docutils literal notranslate"><span class="pre">Couleurim.r</span></code></a></li>
 <li><a class="reference internal" href="#Industrial_Vision.Couleurim.g"><code class="docutils literal notranslate"><span class="pre">Couleurim.g</span></code></a></li>
@@ -1012,6 +1038,7 @@ Imagecv (cv2.Image): The input image for prediction.</p>
 <li><a class="reference internal" href="#Industrial_Vision.Couleurim.argg"><code class="docutils literal notranslate"><span class="pre">Couleurim.argg</span></code></a></li>
 <li><a class="reference internal" href="#Industrial_Vision.Couleurim.argb"><code class="docutils literal notranslate"><span class="pre">Couleurim.argb</span></code></a></li>
 <li><a class="reference internal" href="#Industrial_Vision.Couleurim.nc"><code class="docutils literal notranslate"><span class="pre">Couleurim.nc</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Couleurim.__init__"><code class="docutils literal notranslate"><span class="pre">Couleurim.__init__()</span></code></a></li>
 <li><a class="reference internal" href="#Industrial_Vision.Couleurim.affichage"><code class="docutils literal notranslate"><span class="pre">Couleurim.affichage()</span></code></a></li>
 <li><a class="reference internal" href="#Industrial_Vision.Couleurim.couleur_proche"><code class="docutils literal notranslate"><span class="pre">Couleurim.couleur_proche()</span></code></a></li>
 </ul>
@@ -1025,13 +1052,15 @@ Imagecv (cv2.Image): The input image for prediction.</p>
 <li><a class="reference internal" href="#Industrial_Vision.IAFormes.yt"><code class="docutils literal notranslate"><span class="pre">IAFormes.yt</span></code></a></li>
 <li><a class="reference internal" href="#Industrial_Vision.IAFormes.Proba"><code class="docutils literal notranslate"><span class="pre">IAFormes.Proba()</span></code></a></li>
 <li><a class="reference internal" href="#Industrial_Vision.IAFormes.Proba2"><code class="docutils literal notranslate"><span class="pre">IAFormes.Proba2()</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.IAFormes.__init__"><code class="docutils literal notranslate"><span class="pre">IAFormes.__init__()</span></code></a></li>
 <li><a class="reference internal" href="#Industrial_Vision.IAFormes.matconf"><code class="docutils literal notranslate"><span class="pre">IAFormes.matconf()</span></code></a></li>
 <li><a class="reference internal" href="#Industrial_Vision.IAFormes.montreimage"><code class="docutils literal notranslate"><span class="pre">IAFormes.montreimage()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#Industrial_Vision.IAcouleurs"><code class="docutils literal notranslate"><span class="pre">IAcouleurs</span></code></a><ul>
 <li><a class="reference internal" href="#Industrial_Vision.IAcouleurs.IA"><code class="docutils literal notranslate"><span class="pre">IAcouleurs.IA</span></code></a></li>
-<li><a class="reference internal" href="#Industrial_Vision.IAcouleurs.__livemode"><code class="docutils literal notranslate"><span class="pre">IAcouleurs.__livemode</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.IAcouleurs.livemode"><code class="docutils literal notranslate"><span class="pre">IAcouleurs.livemode</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.IAcouleurs.__init__"><code class="docutils literal notranslate"><span class="pre">IAcouleurs.__init__()</span></code></a></li>
 <li><a class="reference internal" href="#Industrial_Vision.IAcouleurs.afficheinfo"><code class="docutils literal notranslate"><span class="pre">IAcouleurs.afficheinfo()</span></code></a></li>
 <li><a class="reference internal" href="#Industrial_Vision.IAcouleurs.aquisi"><code class="docutils literal notranslate"><span class="pre">IAcouleurs.aquisi()</span></code></a></li>
 <li><a class="reference internal" href="#Industrial_Vision.IAcouleurs.classi2"><code class="docutils literal notranslate"><span class="pre">IAcouleurs.classi2()</span></code></a></li>
@@ -1043,12 +1072,10 @@ Imagecv (cv2.Image): The input image for prediction.</p>
 <li><a class="reference internal" href="#Industrial_Vision.Window"><code class="docutils literal notranslate"><span class="pre">Window</span></code></a><ul>
 <li><a class="reference internal" href="#Industrial_Vision.Window.Worker1"><code class="docutils literal notranslate"><span class="pre">Window.Worker1</span></code></a></li>
 <li><a class="reference internal" href="#Industrial_Vision.Window.Worker2"><code class="docutils literal notranslate"><span class="pre">Window.Worker2</span></code></a></li>
-<li><a class="reference internal" href="#Industrial_Vision.Window.Methods"><code class="docutils literal notranslate"><span class="pre">Window.Methods</span></code></a></li>
 <li><a class="reference internal" href="#Industrial_Vision.Window.CancelFeed"><code class="docutils literal notranslate"><span class="pre">Window.CancelFeed()</span></code></a></li>
-<li><a class="reference internal" href="#Industrial_Vision.Window.ImageUpdate"><code class="docutils literal notranslate"><span class="pre">Window.ImageUpdate</span></code></a></li>
 <li><a class="reference internal" href="#Industrial_Vision.Window.ImageUpdateSlot"><code class="docutils literal notranslate"><span class="pre">Window.ImageUpdateSlot()</span></code></a></li>
-<li><a class="reference internal" href="#Industrial_Vision.Window.PrediUpdate"><code class="docutils literal notranslate"><span class="pre">Window.PrediUpdate</span></code></a></li>
 <li><a class="reference internal" href="#Industrial_Vision.Window.PrediUpdateSlot"><code class="docutils literal notranslate"><span class="pre">Window.PrediUpdateSlot()</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Window.__init__"><code class="docutils literal notranslate"><span class="pre">Window.__init__()</span></code></a></li>
 <li><a class="reference internal" href="#Industrial_Vision.Window.changeim"><code class="docutils literal notranslate"><span class="pre">Window.changeim()</span></code></a></li>
 <li><a class="reference internal" href="#Industrial_Vision.Window.changet"><code class="docutils literal notranslate"><span class="pre">Window.changet()</span></code></a></li>
 <li><a class="reference internal" href="#Industrial_Vision.Window.changettr1"><code class="docutils literal notranslate"><span class="pre">Window.changettr1()</span></code></a></li>
@@ -1058,8 +1085,6 @@ Imagecv (cv2.Image): The input image for prediction.</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#Industrial_Vision.Worker1"><code class="docutils literal notranslate"><span class="pre">Worker1</span></code></a><ul>
-<li><a class="reference internal" href="#Industrial_Vision.Worker1.ImageUpdate"><code class="docutils literal notranslate"><span class="pre">Worker1.ImageUpdate</span></code></a></li>
-<li><a class="reference internal" href="#Industrial_Vision.Worker1.frameUpdate"><code class="docutils literal notranslate"><span class="pre">Worker1.frameUpdate</span></code></a></li>
 <li><a class="reference internal" href="#Industrial_Vision.Worker1.run"><code class="docutils literal notranslate"><span class="pre">Worker1.run()</span></code></a></li>
 <li><a class="reference internal" href="#Industrial_Vision.Worker1.stop"><code class="docutils literal notranslate"><span class="pre">Worker1.stop()</span></code></a></li>
 <li><a class="reference internal" href="#Industrial_Vision.Worker1.timacsses"><code class="docutils literal notranslate"><span class="pre">Worker1.timacsses()</span></code></a></li>
@@ -1069,11 +1094,12 @@ Imagecv (cv2.Image): The input image for prediction.</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#Industrial_Vision.Worker2"><code class="docutils literal notranslate"><span class="pre">Worker2</span></code></a><ul>
-<li><a class="reference internal" href="#Industrial_Vision.Worker2.PrediUpdate"><code class="docutils literal notranslate"><span class="pre">Worker2.PrediUpdate</span></code></a></li>
+<li><a class="reference internal" href="#Industrial_Vision.Worker2.__init__"><code class="docutils literal notranslate"><span class="pre">Worker2.__init__()</span></code></a></li>
 <li><a class="reference internal" href="#Industrial_Vision.Worker2.detection"><code class="docutils literal notranslate"><span class="pre">Worker2.detection()</span></code></a></li>
 <li><a class="reference internal" href="#Industrial_Vision.Worker2.pr"><code class="docutils literal notranslate"><span class="pre">Worker2.pr()</span></code></a></li>
 <li><a class="reference internal" href="#Industrial_Vision.Worker2.stop"><code class="docutils literal notranslate"><span class="pre">Worker2.stop()</span></code></a></li>
-<li><a class="reference internal" href="#Industrial_Vision.Worker2.traitth1"><code class="docutils literal notranslate"><span class="pre">Worker2.traitth1()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

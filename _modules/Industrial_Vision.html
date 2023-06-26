@@ -246,7 +246,7 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Test</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="IAFormes.__init__"><a class="viewcode-back" href="../Industrial_Vision.html#Industrial_Vision.IAFormes.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Test</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Initializes the IAFormes object.</span>
 
@@ -302,7 +302,7 @@
 <span class="sd">            Prints the accuracy score of the MLP classifier on the test dataset.</span>
 <span class="sd">            &quot;&quot;&quot;</span>
 
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Test set score: </span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">__mlp2</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">))</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Test set score: </span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">__mlp2</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">))</span></div>
 
 <div class="viewcode-block" id="IAFormes.montreimage"><a class="viewcode-back" href="../Industrial_Vision.html#Industrial_Vision.IAFormes.montreimage">[docs]</a>    <span class="k">def</span> <span class="nf">montreimage</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="nb">set</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -383,7 +383,7 @@
 <span class="sd">        nc (list): Maximum color values for each channel.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Foldername</span><span class="o">=</span><span class="s1">&#39;images/o1.bmp&#39;</span><span class="p">,</span> <span class="n">livemode</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">Frame</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="Couleurim.__init__"><a class="viewcode-back" href="../Industrial_Vision.html#Industrial_Vision.Couleurim.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Foldername</span><span class="o">=</span><span class="s1">&#39;images/o1.bmp&#39;</span><span class="p">,</span> <span class="n">livemode</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">Frame</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Initializes the Couleurim object.</span>
 
@@ -431,7 +431,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">argr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">argb</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">argg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">argb</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">nc</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">r</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">argr</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">g</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">argg</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">argb</span><span class="p">]]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nc</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">r</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">argr</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">g</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">argg</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">argb</span><span class="p">]]</span></div>
 
 <div class="viewcode-block" id="Couleurim.affichage"><a class="viewcode-back" href="../Industrial_Vision.html#Industrial_Vision.Couleurim.affichage">[docs]</a>    <span class="k">def</span> <span class="nf">affichage</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -519,10 +519,10 @@
 
 <span class="sd">    Attributes:</span>
 <span class="sd">        IA (IAFormes): Instance of the IAFormes class for shape classification.</span>
-<span class="sd">        __livemode (bool): Flag indicating whether the live mode is enabled or not.</span>
+<span class="sd">        livemode (bool): Flag indicating whether the live mode is enabled or not.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">livemode</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="IAcouleurs.__init__"><a class="viewcode-back" href="../Industrial_Vision.html#Industrial_Vision.IAcouleurs.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">livemode</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Initializes the IAcouleurs object.</span>
 
@@ -531,7 +531,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">IA</span> <span class="o">=</span> <span class="n">IAFormes</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__livemode</span> <span class="o">=</span> <span class="n">livemode</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__livemode</span> <span class="o">=</span> <span class="n">livemode</span></div>
 
 <div class="viewcode-block" id="IAcouleurs.classification"><a class="viewcode-back" href="../Industrial_Vision.html#Industrial_Vision.IAcouleurs.classification">[docs]</a>    <span class="k">def</span> <span class="nf">classification</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">Fichier</span><span class="o">=</span><span class="s1">&#39;images/e1.bmp&#39;</span><span class="p">,</span> <span class="n">Frame</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -677,24 +677,12 @@
 <span class="sd">    Attributes:</span>
 <span class="sd">        Worker1 (Worker1): Worker1 instance for capturing frames from the camera and applying filters.</span>
 <span class="sd">        Worker2 (Worker2): Worker2 instance for image processing and prediction.</span>
-
-<span class="sd">        Methods:</span>
-<span class="sd">            __init__(self, parent=None): Initializes the Window object and sets up the user interface.</span>
-<span class="sd">            CancelFeed(self): Cancels the video feed and stops the workers.</span>
-<span class="sd">            changet(self): Slot for handling changes in the time interval.</span>
-<span class="sd">            changeim(self, c): Slot for handling changes in the image processing mode.</span>
-<span class="sd">            changettr1(self): Slot for handling changes in the threshold value.</span>
-<span class="sd">            ImageUpdateSlot(self, Image): Slot for updating the displayed image.</span>
-<span class="sd">            PrediUpdateSlot(self, pred): Slot for updating the prediction result.</span>
-<span class="sd">            traitim(self, val): Slot for handling changes in the image processing mode.</span>
-<span class="sd">            fin(self): Slot for stopping the workers.</span>
-<span class="sd">            marcheCl(self): Slot for starting the workers and configuring the processing parameters.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">ImageUpdate</span> <span class="o">=</span> <span class="n">pyqtSignal</span><span class="p">(</span><span class="n">QImage</span><span class="p">)</span>
     <span class="n">PrediUpdate</span> <span class="o">=</span> <span class="n">pyqtSignal</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="Window.__init__"><a class="viewcode-back" href="../Industrial_Vision.html#Industrial_Vision.Window.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Initializes the Window object and sets up the user interface.</span>
 
@@ -740,7 +728,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">Worker2</span><span class="o">.</span><span class="n">tab2</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">Worker2</span><span class="o">.</span><span class="n">tab3</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">Worker2</span><span class="o">.</span><span class="n">detection</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Worker2</span><span class="o">.</span><span class="n">detection</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="Window.CancelFeed"><a class="viewcode-back" href="../Industrial_Vision.html#Industrial_Vision.Window.CancelFeed">[docs]</a>    <span class="k">def</span> <span class="nf">CancelFeed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -1289,7 +1277,7 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">PrediUpdate</span> <span class="o">=</span> <span class="n">pyqtSignal</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Worker2.__init__"><a class="viewcode-back" href="../Industrial_Vision.html#Industrial_Vision.Worker2.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Initialize the Worker2 class.</span>
 
@@ -1323,7 +1311,7 @@
             
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Port Selected : COM</span><span class="si">{</span><span class="n">selectPort</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
         
-        <span class="bp">self</span><span class="o">.</span><span class="n">serNuc</span> <span class="o">=</span> <span class="n">Serial</span><span class="p">(</span><span class="s1">&#39;COM&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">selectPort</span><span class="p">),</span> <span class="mi">115200</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">serNuc</span> <span class="o">=</span> <span class="n">Serial</span><span class="p">(</span><span class="s1">&#39;COM&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">selectPort</span><span class="p">),</span> <span class="mi">115200</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="Worker2.pr"><a class="viewcode-back" href="../Industrial_Vision.html#Industrial_Vision.Worker2.pr">[docs]</a>    <span class="k">def</span> <span class="nf">pr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Imagecv</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -1390,9 +1378,9 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">serNuc</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>  <span class="c1"># Stop class execution</span></div>
 
-<div class="viewcode-block" id="Worker2.traitth1"><a class="viewcode-back" href="../Industrial_Vision.html#Industrial_Vision.Worker2.traitth1">[docs]</a>    <span class="k">def</span> <span class="nf">traitth1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">traitth1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">th1</span> <span class="o">=</span> <span class="n">t</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">th1</span> <span class="o">=</span> <span class="n">t</span>
 
 <div class="viewcode-block" id="Worker2.detection"><a class="viewcode-back" href="../Industrial_Vision.html#Industrial_Vision.Worker2.detection">[docs]</a>    <span class="k">def</span> <span class="nf">detection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
