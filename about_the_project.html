@@ -2,14 +2,18 @@
 <html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Modules" href="modules.html" /><link rel="prev" title="Quickstart" href="Usage.html" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <link sizes="16x16" href="_static/_static/logo.png" rel="icon" type="image/png">
+    <link sizes="32x32" href="_static/_static/logo.png" rel="icon" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="_static/_static/logo.png" type="image/png"><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Modules" href="modules.html" /><link rel="prev" title="Quickstart" href="Usage.html" />
 
-    <!-- Generated with Sphinx 7.0.1 and Furo 2023.05.20 -->
+    <!-- Generated with Sphinx 6.2.1 and Furo 2023.05.20 -->
         <title>About the project - Industrial_Vision 1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=e6660623a769aa55fea372102b9bf3151b292993" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -141,7 +145,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -152,6 +156,9 @@
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="_static/logo.png" alt="Logo"/>
+  </div>
   
   <span class="sidebar-brand-text">Industrial_Vision 1.0 documentation</span>
   
@@ -199,7 +206,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -211,55 +218,65 @@
 <p class="admonition-title">Caution</p>
 <p>This website is still a work in progress</p>
 </div>
-<section id="image-preprocessing">
-<h2>Image preprocessing<a class="headerlink" href="#image-preprocessing" title="Permalink to this heading">#</a></h2>
-<p>In our case, we started with an image from the camera that has a size of <cite>1280×720</cite> pixels, to preprocess the image
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in-slide-down" open="open">
+<summary class="sd-summary-title sd-card-header">
+Image preprocessing<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">In our case, we started with an image from the camera that has a size of <cite>1280×720</cite> pixels, to preprocess the image
 for shape recognition here is the different steps involved :</p>
 <ol class="arabic">
-<li><p><strong>Conversion to Grayscale</strong>:</p>
-<p>The RGB image is transformed into a grayscale image. This conversion reduces the image to a single channel,
+<li><p class="sd-card-text"><strong>Conversion to Grayscale</strong>:</p>
+<p class="sd-card-text">The RGB image is transformed into a grayscale image. This conversion reduces the image to a single channel,
 simplifying the subsequent analysis.</p>
 </li>
-<li><p><strong>Thresholding</strong>:</p>
-<p>Low-intensity pixels are thresholded, separating them from the rest of the image. By setting a threshold,
+<li><p class="sd-card-text"><strong>Thresholding</strong>:</p>
+<p class="sd-card-text">Low-intensity pixels are thresholded, separating them from the rest of the image. By setting a threshold,
 this operation enhances contrast and emphasizes the boundaries of shapes, making them more distinguishable
 for recognition algorithms.</p>
 </li>
-<li><p><strong>Resizing</strong>:</p>
-<p>The image is resized to a smaller size of <cite>51×64</cite>. This step reduces computational complexity and allows
+<li><p class="sd-card-text"><strong>Resizing</strong>:</p>
+<p class="sd-card-text">The image is resized to a smaller size of <cite>51×64</cite>. This step reduces computational complexity and allows
 for efficient processing. Despite the reduction in dimensions, the resizing ensures that crucial shape
 details are preserved, enabling accurate identification.</p>
 </li>
 </ol>
-<p>Here is the processing scheme applied to an image from the camera :</p>
+<p class="sd-card-text">Here is the processing scheme applied to an image from the camera :</p>
 <a class="reference internal image-reference" href="_images/schema1.png"><img alt="_images/schema1.png" class="align-center" src="_images/schema1.png" style="width: 1000px;" /></a>
-<p>By extracting and simplifying essential information from the original image, the preprocessed image becomes more
+<p class="sd-card-text">By extracting and simplifying essential information from the original image, the preprocessed image becomes more
 suitable for the neural network.</p>
-</section>
-<section id="model-design">
-<h2>Model design<a class="headerlink" href="#model-design" title="Permalink to this heading">#</a></h2>
-<p>In order to predict the shape and color of an image captured by the camera, a series of
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in-slide-down" open="open">
+<summary class="sd-summary-title sd-card-header">
+Model design<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">In order to predict the shape and color of an image captured by the camera, a series of
 preprocessing steps are carried out. The incoming image undergoes preprocessing and is
 transformed into a feature vector. This feature vector is then fed into a Multilayer
 Perceptron (MLP) model from the scikit-learn library.</p>
 <a class="reference internal image-reference" href="_images/schema2.jpg"><img alt="_images/schema2.jpg" class="align-center" src="_images/schema2.jpg" style="width: 1000px;" /></a>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>To train this model we used the <a class="reference internal" href="IA_training.html#module-IA_training" title="IA_training"><code class="xref py py-class docutils literal notranslate"><span class="pre">IA_training</span></code></a> module
+<p class="sd-card-text">To train this model we used the <a class="reference internal" href="IA_training.html#module-IA_training" title="IA_training"><code class="xref py py-class docutils literal notranslate"><span class="pre">IA_training</span></code></a> module
 And to create the data base we used the <a class="reference internal" href="Create_DDB.html#module-Create_DDB" title="Create_DDB"><code class="xref py py-class docutils literal notranslate"><span class="pre">Create_DDB</span></code></a>  module, and generated <cite>91 000</cite> images</p>
 </div>
-<p>Simultaneously, the image is also passed through a color recognition function that estimates the
+<p class="sd-card-text">Simultaneously, the image is also passed through a color recognition function that estimates the
 color based on the least square distance of the color RGB vector.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>For this matter, we used the <code class="xref py py-class docutils literal notranslate"><span class="pre">IAcouleurs</span></code> class</p>
+<p class="sd-card-text">For this matter, we used the <code class="xref py py-class docutils literal notranslate"><span class="pre">IAcouleurs</span></code> class</p>
 </div>
-<p>By employing these parallel processes, the system then
+<p class="sd-card-text">By employing these parallel processes, the system then
 generates a prediction with the color and shape of the image. The prediction is presented
 as a result in the form ‘[color, shape]’.</p>
-<p>This process is detailed in the diagram below :</p>
+<p class="sd-card-text">This process is detailed in the diagram below :</p>
 <a class="reference internal image-reference" href="_images/schema3.jpg"><img alt="_images/schema3.jpg" class="align-center" src="_images/schema3.jpg" style="width: 1200px;" /></a>
-<p>To ensure high precision, we leverage the multiple images captured as an object passes in
+<p class="sd-card-text">To ensure high precision, we leverage the multiple images captured as an object passes in
 front of the camera. For each image, a prediction is calculated, taking into account both
 the shape and color of the object. During the acquisition window, the prediction that appears
 most frequently is selected. This chosen prediction is then fed to the Arduino card, which controls
@@ -267,8 +284,8 @@ the movement of servomotors accordingly. By considering a series of predictions 
 most consistent one, we enhance the accuracy of the system and enable precise adjustments of the servomotors
 based on the identified object characteristics.</p>
 <a class="reference internal image-reference" href="_images/schema4.jpg"><img alt="Texte alternatif de l'image" class="align-center" src="_images/schema4.jpg" style="width: 800px;" /></a>
-</section>
-</section>
+</div>
+</details></section>
 
         </article>
       </div>
@@ -313,28 +330,8 @@ based on the identified object characteristics.</p>
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">About the project</a><ul>
-<li><a class="reference internal" href="#image-preprocessing">Image preprocessing</a></li>
-<li><a class="reference internal" href="#model-design">Model design</a></li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>
@@ -345,5 +342,6 @@ based on the identified object characteristics.</p>
     <script src="_static/scripts/furo.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/design-tabs.js"></script>
     </body>
 </html>

@@ -2,14 +2,18 @@
 <html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Create_DDB module" href="Create_DDB.html" /><link rel="prev" title="Industrial_Vision module" href="Industrial_Vision.html" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <link sizes="16x16" href="_static/_static/logo.png" rel="icon" type="image/png">
+    <link sizes="32x32" href="_static/_static/logo.png" rel="icon" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="_static/_static/logo.png" type="image/png"><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Create_DDB module" href="Create_DDB.html" /><link rel="prev" title="Industrial_Vision module" href="Industrial_Vision.html" />
 
-    <!-- Generated with Sphinx 7.0.1 and Furo 2023.05.20 -->
+    <!-- Generated with Sphinx 6.2.1 and Furo 2023.05.20 -->
         <title>IA_training module - Industrial_Vision 1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=e6660623a769aa55fea372102b9bf3151b292993" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -152,6 +156,9 @@
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="_static/logo.png" alt="Logo"/>
+  </div>
   
   <span class="sidebar-brand-text">Industrial_Vision 1.0 documentation</span>
   
@@ -208,25 +215,30 @@
           <section id="ia-training-module">
 <h1>IA_training module<a class="headerlink" href="#ia-training-module" title="Permalink to this heading">#</a></h1>
 <p>The EntrainementIA algorithm is designed to train an artificial neural network, specifically a Multi-Layer Perceptron (MLP), using the preprocessed databases.</p>
-<p>The algorithm begins by importing the preprocessed databases, which contain data in the form required for training the MLP. These databases include different shapes such as squares, circles, triangles, pentagons, and stars. The data from each shape is organized and combined into a single dataset.</p>
-<p>Next, the algorithm sets up the training and testing data witch will be used to evaluate the trained model’s performance.</p>
-<p>The MLP classifier is configured with specific hyperparameters, such as the number and size of hidden layers, activation function, learning rate, and optimization algorithm. These parameters can be adjusted to optimize the model’s performance.</p>
-<p>The algorithm then proceeds to train the MLP model using the training data. During training, the MLP learns to classify the input images into their respective shape categories based on the provided target labels.</p>
-<p>After training, the algorithm provides various information about the trained model. It displays the accuracy score, indicating how well the model performs on the testing data. The loss curve is also shown, which represents the training loss at each iteration, providing insights into the model’s convergence.</p>
-<p>The algorithm includes additional functionalities, such as displaying individual images from the datasets, visualizing weight matrices of the trained model, and generating a confusion matrix to evaluate the model’s performance in detail.</p>
-<div class="admonition tip">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in-slide-down" open="open">
+<summary class="sd-summary-title sd-card-header">
+<strong>Features</strong> <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-flame" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M7.998 14.5c2.832 0 5-1.98 5-4.5 0-1.463-.68-2.19-1.879-3.383l-.036-.037c-1.013-1.008-2.3-2.29-2.834-4.434-.322.256-.63.579-.864.953-.432.696-.621 1.58-.046 2.73.473.947.67 2.284-.278 3.232-.61.61-1.545.84-2.403.633a2.788 2.788 0 01-1.436-.874A3.21 3.21 0 003 10c0 2.53 2.164 4.5 4.998 4.5zM9.533.753C9.496.34 9.16.009 8.77.146 7.035.75 4.34 3.187 5.997 6.5c.344.689.285 1.218.003 1.5-.419.419-1.54.487-2.04-.832-.173-.454-.659-.762-1.035-.454C2.036 7.44 1.5 8.702 1.5 10c0 3.512 2.998 6 6.498 6s6.5-2.5 6.5-6c0-2.137-1.128-3.26-2.312-4.438-1.19-1.184-2.436-2.425-2.653-4.81z"></path></svg><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The algorithm begins by importing the preprocessed databases, which contain data in the form required for training the MLP. These databases include different shapes such as squares, circles, triangles, pentagons, and stars. The data from each shape is organized and combined into a single dataset.</p>
+<p class="sd-card-text">Next, the algorithm sets up the training and testing data witch will be used to evaluate the trained model’s performance.</p>
+<p class="sd-card-text">The MLP classifier is configured with specific hyperparameters, such as the number and size of hidden layers, activation function, learning rate, and optimization algorithm. These parameters can be adjusted to optimize the model’s performance.</p>
+<p class="sd-card-text">The algorithm then proceeds to train the MLP model using the training data. During training, the MLP learns to classify the input images into their respective shape categories based on the provided target labels.</p>
+<p class="sd-card-text">After training, the algorithm provides various information about the trained model. It displays the accuracy score, indicating how well the model performs on the testing data. The loss curve is also shown, which represents the training loss at each iteration, providing insights into the model’s convergence.</p>
+<p class="sd-card-text">The algorithm includes additional functionalities, such as displaying individual images from the datasets, visualizing weight matrices of the trained model, and generating a confusion matrix to evaluate the model’s performance in detail.</p>
+</div>
+</details><div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>The algorithm also provides the ability to save the trained model’s weights for future use.
 It also allows loading previously saved weights to set the MLP model’s parameters.</p>
 </div>
-<span class="target" id="module-IA_training"></span><dl class="field-list simple">
-<dt class="field-odd">show-inheritance<span class="colon">:</span></dt>
-<dd class="field-odd"><p></p></dd>
-</dl>
-<dl class="py class">
+<span class="target" id="module-IA_training"></span><dl class="py class">
 <dt class="sig sig-object py" id="IA_training.EntrainementIA">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">IA_training.</span></span><span class="sig-name descname"><span class="pre">EntrainementIA</span></span><a class="reference internal" href="_modules/IA_training.html#EntrainementIA"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#IA_training.EntrainementIA" title="Permalink to this definition">#</a></dt>
-<dd><p>Class for training an artificial neural network (MLP) using the preprocessed databases.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for training an artificial neural network (MLP) using the preprocessed databases.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="IA_training.EntrainementIA.x_train">
 <span class="sig-name descname"><span class="pre">x_train</span></span><a class="headerlink" href="#IA_training.EntrainementIA.x_train" title="Permalink to this definition">#</a></dt>
@@ -453,5 +465,6 @@ to previously saved weights.</p>
     <script src="_static/scripts/furo.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/design-tabs.js"></script>
     </body>
 </html>

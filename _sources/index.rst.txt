@@ -31,7 +31,7 @@ and utilizes a live feed to recognizes shapes with a pretrained AI model.
 The sorted objects are then directed to appropriate 
 locations using servo motors, providing an efficient and streamlined sorting solution.
 
-Project Overview
+Project Overview 
 ----------------
 
 With Industrial_Vision, the primary objective is to develop a practical system that 
@@ -54,7 +54,7 @@ and the extracted features are fed into an AI model for shape recognition and co
    .. py:class:: Industrial_Vision() 
       :noindex:
       
-      Documentation of the :py:class:`Industrial_Vision()` module.
+      :octicon:`device-camera-video` Documentation of the :py:class:`Industrial_Vision()` module. 
 
 To train the AI model, we use the scikit-learn library in Python, we also developed the training algorithm
 for the AI model.
@@ -64,7 +64,7 @@ for the AI model.
    .. py:class:: IA_training() 
       :noindex:
       
-      Documentation of the :py:class:`IA_training()` module.
+      :octicon:`rocket` Documentation of the :py:class:`IA_training()` module. 
 
 
 
@@ -74,12 +74,12 @@ are labeled according to their corresponding shapes, creating a diverse dataset
 that enables the AI model to learn and classify shapes effectively.
 
 
-.. seealso::
+.. seealso:: 
 
    .. py:class:: Create_DDB() 
       :noindex:
       
-      Documentation of the :py:class:`Create_DDB`  module.
+      :octicon:`database` Documentation of the :py:class:`Create_DDB` module. 
 
 
 

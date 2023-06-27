@@ -2,14 +2,18 @@
 <html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="IA_training module" href="IA_training.html" /><link rel="prev" title="Modules" href="modules.html" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <link sizes="16x16" href="_static/_static/logo.png" rel="icon" type="image/png">
+    <link sizes="32x32" href="_static/_static/logo.png" rel="icon" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="_static/_static/logo.png" type="image/png"><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="IA_training module" href="IA_training.html" /><link rel="prev" title="Modules" href="modules.html" />
 
-    <!-- Generated with Sphinx 7.0.1 and Furo 2023.05.20 -->
+    <!-- Generated with Sphinx 6.2.1 and Furo 2023.05.20 -->
         <title>Industrial_Vision module - Industrial_Vision 1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=e6660623a769aa55fea372102b9bf3151b292993" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -152,6 +156,9 @@
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="_static/logo.png" alt="Logo"/>
+  </div>
   
   <span class="sidebar-brand-text">Industrial_Vision 1.0 documentation</span>
   
@@ -210,22 +217,25 @@
 <p>This code package provides a Qt user interface class, along with two worker classes:</p>
 <p>Worker1 for live video feed and image processing, and Worker2 for shape and color recognition, powered by the <code class="xref py py-class docutils literal notranslate"><span class="pre">IAcouleurs</span></code> class, itself poxered by <code class="xref py py-class docutils literal notranslate"><span class="pre">IAFormes</span></code>
 and <code class="xref py py-class docutils literal notranslate"><span class="pre">Couleurim</span></code> class.</p>
-<section id="features">
-<h2>Features<a class="headerlink" href="#features" title="Permalink to this heading">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 sd-fade-in-slide-down" open="open">
+<summary class="sd-summary-title sd-card-header">
+1. <strong>Features</strong>   <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-flame" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M7.998 14.5c2.832 0 5-1.98 5-4.5 0-1.463-.68-2.19-1.879-3.383l-.036-.037c-1.013-1.008-2.3-2.29-2.834-4.434-.322.256-.63.579-.864.953-.432.696-.621 1.58-.046 2.73.473.947.67 2.284-.278 3.232-.61.61-1.545.84-2.403.633a2.788 2.788 0 01-1.436-.874A3.21 3.21 0 003 10c0 2.53 2.164 4.5 4.998 4.5zM9.533.753C9.496.34 9.16.009 8.77.146 7.035.75 4.34 3.187 5.997 6.5c.344.689.285 1.218.003 1.5-.419.419-1.54.487-2.04-.832-.173-.454-.659-.762-1.035-.454C2.036 7.44 1.5 8.702 1.5 10c0 3.512 2.998 6 6.498 6s6.5-2.5 6.5-6c0-2.137-1.128-3.26-2.312-4.438-1.19-1.184-2.436-2.425-2.653-4.81z"></path></svg><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <ol class="arabic simple">
-<li><p><strong>Qt User Interface Class</strong>: The Qt user interface class provides an interactive and intuitive graphical interface for the Industrial Vision system. It enables users to interact with the system, configure settings, visualize real-time video feed, send information to the Nucleo card, and receive the recognition results.</p></li>
-<li><p><strong>Worker1 Class</strong>: The Worker1 class is responsible for capturing live video feed and performing image processing operations. This class plays a vital role in preprocessing the images to ensure accurate and reliable shape and color recognition.</p></li>
-<li><p><strong>Worker2 Class</strong>: The Worker2 class combines the power of AI models with shape and color recognition. It utilizes IAcouleur Class to perform analysis on preprocessed images.</p></li>
-<li><p><strong>IAcouleurs</strong>: The <code class="xref py py-class docutils literal notranslate"><span class="pre">IAcouleurs</span></code> Class is a combination of <cite>IAFormes</cite> and  <cite>Couleurim</cite> class that utilizes the trained machine learning model to recognize various shapes. it is also designed to identify colors in the images. It employs least squares to recognize and classify different colors with high accuracy.</p></li>
+<li><p class="sd-card-text"><strong>Qt User Interface Class</strong>: The Qt user interface class provides an interactive and intuitive graphical interface for the Industrial Vision system. It enables users to interact with the system, configure settings, visualize real-time video feed, send information to the Nucleo card, and receive the recognition results.</p></li>
+<li><p class="sd-card-text"><strong>Worker1 Class</strong>: The Worker1 class is responsible for capturing live video feed and performing image processing operations. This class plays a vital role in preprocessing the images to ensure accurate and reliable shape and color recognition.</p></li>
+<li><p class="sd-card-text"><strong>Worker2 Class</strong>: The Worker2 class combines the power of AI models with shape and color recognition. It utilizes IAcouleur Class to perform analysis on preprocessed images.</p></li>
+<li><p class="sd-card-text"><strong>IAcouleurs</strong>: The <code class="xref py py-class docutils literal notranslate"><span class="pre">IAcouleurs</span></code> Class is a combination of <cite>IAFormes</cite> and  <cite>Couleurim</cite> class that utilizes the trained machine learning model to recognize various shapes. it is also designed to identify colors in the images. It employs least squares to recognize and classify different colors with high accuracy.</p></li>
 </ol>
-<span class="target" id="module-Industrial_Vision"></span><dl class="field-list simple">
-<dt class="field-odd">show-inheritance<span class="colon">:</span></dt>
-<dd class="field-odd"><p></p></dd>
-</dl>
-<dl class="py class">
+</div>
+</details><span class="target" id="module-Industrial_Vision"></span><dl class="py class">
 <dt class="sig sig-object py" id="Industrial_Vision.Couleurim">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Industrial_Vision.</span></span><span class="sig-name descname"><span class="pre">Couleurim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Foldername</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'images/o1.bmp'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">livemode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Frame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Couleurim"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Couleurim" title="Permalink to this definition">#</a></dt>
-<dd><p>Couleurim class represents an image color analysis tool.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Couleurim class represents an image color analysis tool.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -363,7 +373,8 @@ which uses the analyzed color stored in nc attribute.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="Industrial_Vision.IAFormes">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Industrial_Vision.</span></span><span class="sig-name descname"><span class="pre">IAFormes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Test</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#IAFormes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.IAFormes" title="Permalink to this definition">#</a></dt>
-<dd><p>IAFormes class implements a shape recognition system using a multi-layer perceptron (MLP) classifier.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>IAFormes class implements a shape recognition system using a multi-layer perceptron (MLP) classifier.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>Test</strong> (<em>bool</em>) – If True, initializes the classifier with a test dataset. Default is False.</p>
@@ -509,7 +520,8 @@ which uses the analyzed color stored in nc attribute.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="Industrial_Vision.IAcouleurs">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Industrial_Vision.</span></span><span class="sig-name descname"><span class="pre">IAcouleurs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">livemode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#IAcouleurs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.IAcouleurs" title="Permalink to this definition">#</a></dt>
-<dd><p>IAcouleurs class represents an image color and shape classification tool.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>IAcouleurs class represents an image color and shape classification tool.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>livemode</strong> (<em>bool</em>) – If True, enables live mode for analyzing frames. Default is True.</p>
@@ -681,7 +693,8 @@ above or equal to the threshold are kept as is.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="Industrial_Vision.Window">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Industrial_Vision.</span></span><span class="sig-name descname"><span class="pre">Window</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Industrial_Vision.html#Window"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Window" title="Permalink to this definition">#</a></dt>
-<dd><p>Window class represents the main interface for displaying a video feed and processing images.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QWidget</span></code></p>
+<p>Window class represents the main interface for displaying a video feed and processing images.</p>
 <dl class="simple">
 <dt>Signals:</dt><dd><p>ImageUpdate (QImage): Signal emitted when a new frame is available to update the displayed image.
 PrediUpdate (list): Signal emitted when a new prediction result is available.</p>
@@ -799,7 +812,8 @@ PrediUpdate (list): Signal emitted when a new prediction result is available.</p
 <dl class="py class">
 <dt class="sig sig-object py" id="Industrial_Vision.Worker1">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Industrial_Vision.</span></span><span class="sig-name descname"><span class="pre">Worker1</span></span><a class="reference internal" href="_modules/Industrial_Vision.html#Worker1"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Worker1" title="Permalink to this definition">#</a></dt>
-<dd><p>A worker thread class for image processing.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QThread</span></code></p>
+<p>A worker thread class for image processing.</p>
 <dl class="simple">
 <dt>Signals:</dt><dd><ul class="simple">
 <li><p>ImageUpdate: A PyQt signal emitted when a processed image is ready to be displayed.</p></li>
@@ -919,7 +933,8 @@ t (int): The value to set for ‘th2’.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="Industrial_Vision.Worker2">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Industrial_Vision.</span></span><span class="sig-name descname"><span class="pre">Worker2</span></span><a class="reference internal" href="_modules/Industrial_Vision.html#Worker2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Industrial_Vision.Worker2" title="Permalink to this definition">#</a></dt>
-<dd><p>A worker class for performing tasks in a separate thread.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QThread</span></code></p>
+<p>A worker class for performing tasks in a separate thread.</p>
 <p>This class inherits from QThread and is designed to perform certain operations in the background.
 It utilizes the IAcouleurs class for image color representation and shape classification using a neural network.
 The goal of this class is to process images, perform classification, and send classification information to a nuclei card
@@ -970,7 +985,6 @@ Imagecv (cv2.Image): The input image for prediction.</p>
 
 </dd></dl>
 
-</section>
 </section>
 
         </article>
@@ -1029,7 +1043,6 @@ Imagecv (cv2.Image): The input image for prediction.</p>
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Industrial_Vision module</a><ul>
-<li><a class="reference internal" href="#features">Features</a><ul>
 <li><a class="reference internal" href="#Industrial_Vision.Couleurim"><code class="docutils literal notranslate"><span class="pre">Couleurim</span></code></a><ul>
 <li><a class="reference internal" href="#Industrial_Vision.Couleurim.r"><code class="docutils literal notranslate"><span class="pre">Couleurim.r</span></code></a></li>
 <li><a class="reference internal" href="#Industrial_Vision.Couleurim.g"><code class="docutils literal notranslate"><span class="pre">Couleurim.g</span></code></a></li>
@@ -1103,8 +1116,6 @@ Imagecv (cv2.Image): The input image for prediction.</p>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
 
           </div>
         </div>
@@ -1119,5 +1130,6 @@ Imagecv (cv2.Image): The input image for prediction.</p>
     <script src="_static/scripts/furo.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/design-tabs.js"></script>
     </body>
 </html>
