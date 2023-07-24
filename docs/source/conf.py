@@ -20,6 +20,8 @@ release = '1.0'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
+
+
 extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.viewcode",
@@ -44,16 +46,16 @@ autodoc_mock_imports = ["pyueye","serial.tools.list_ports","Serial","cv2","webco
 favicons = [
    {
       "sizes": "16x16",
-      "href": "_static/logo.png",
+      "href": "logo.png",
    },
    {
       "sizes": "32x32",
-      "href": "_static/logo.png",
+      "href": "logo.png",
    },
    {
       "rel": "apple-touch-icon",
       "sizes": "180x180",
-      "href": "_static/logo.png",  # use a local file in _static
+      "href": "logo.png",  # use a local file in _static
    },
 ]
 
